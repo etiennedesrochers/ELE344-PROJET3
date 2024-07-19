@@ -19,7 +19,7 @@ PORT (
  Input_0, Input_1,Input_2: IN std_logic_vector(N-1 downto 0);
  sel      :  IN std_logic_vector(1 downto 0);
  out1     : OUT std_logic_vector(N-1 downto 0));
-END; -- Controller;
+END; 
 
 architecture rtl of mux3 is
 

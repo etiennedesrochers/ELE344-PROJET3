@@ -254,23 +254,83 @@ begin
       sel     => AluSrc,
       out1    => srcB
     );
+    mux3_srca : entity work.mux3
+    generic map (
+        N => 32
+      )
+        port map(
+            Input_0<=ID_EX_rd1,
+            Input_1<=WB_Result ,
+            Input_2<=EX_MEM_AluResult ,
+            sel <= EX_ForwardA,
+            out1 <= EX_SrcA 
+
+        );
+    mux3_srcb : entity work.mux3
+    generic map (
+        N => 32
+      )
+        port map(
+            Input_0<=ID_EX_rd2 ,
+            Input_1<= WB_Result,
+            Input_2<=EX_MEM_AluResult ,
+            sel <= EX_ForwardB,
+            out1 <= EX_preSrcB  
+
+        );
+    mux_srcB1: entity work.mux2
+    generic map (
+      N => 32
+    )
+    port map (
+      Input_0 => EX_preSrcB  ,
+      Input_1 => ID_EX_SignImm,
+      sel     => ID_EX_AluSrc,
+      out1    => EX_SrcB 
+    );
     --ALU réalisé dans le cadre du projet 1
     UAL_inst: entity work.UAL
      generic map(
         N => 32
     )
      port map(
-        ualControl => AluControl,
-        srcA => ReadData1,
-        srcB => srcB,
-        result => AluResult_s,
-        cout => cout,
+        ualControl => ID_EX_AluControl,
+        srcA => EX_SrcA,
+        srcB => EX_SrcB,
+        result => EX_AluResult,
+        cout => EX_cout,
         zero =>  EX_Zero  
     );
+    mux_3248: entity work.mux2
+    generic map (
+      N => 32
+    )
+    port map (
+      Input_0 => ID_EX_rt   ,
+      Input_1 => ID_EX_rd,
+      sel     => ID_EX_RegDst,
+      out1    => EX_WriteReg 
+    );
+    EXMEm_inst : entity work.EXMEM
+    port map (
+        clk   <=CLK,
+        reset <=RESET,
+        wb<=todo,
+        m <=todo,
+        alu <=EX_AluResult,
+        presrb<=EX_preSrcB,
+        WriteReg <=EX_WriteReg,
+        wbo <=todo,
+        aluo <=EX_MEM_AluResult ,
+        presrbo<=EX_MEM_preSrcB ,
+        WriteRego<=EX_MEM_WriteReg 
 
+
+
+    );
     --Assignation des sortie et autres signaux
-    AluResult <= AluResult_s;
-    WriteData <= ReadData2;
+    AluResult <=EX_MEM_AluResult ;
+    WriteData <= EX_MEM_preSrcB;
     Pc <= IF_PC;
     MemReadOut<= MemReadIn;
     MemWriteOut <= MemWriteIn;
