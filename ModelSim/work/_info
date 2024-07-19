@@ -1,0 +1,469 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/desro/Documents/ELE344/Projet 2/ELE344-Projet-2/Controlleur Model Sim
+Econtrol
+Z0 w1721407535
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/ModelSim
+Z5 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/control.vhd
+Z6 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/control.vhd
+l0
+L15
+V;:N7g`c8AALm9R5:m1gL`2
+!s100 V`O[RR]eWTzfA5NRN1odm1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1721408673
+!i10b 1
+Z9 !s108 1721408673.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/control.vhd|
+Z11 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/control.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Acontrol
+R1
+R2
+R3
+Z14 DEx4 work 7 control 0 22 ;:N7g`c8AALm9R5:m1gL`2
+l27
+L23
+Vj7:=^TQfk2]A::WBCO^n81
+!s100 6g4hQ_7<4=93SUaQB<]W@2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edatapath
+Z15 w1721408636
+R1
+R2
+R3
+R4
+Z16 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/datapath.vhd
+Z17 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/datapath.vhd
+l0
+L14
+VDk^00ajKTVSdO7BNXo`EI2
+!s100 CP35VRc;W`K==Ra^?lkQJ3
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/datapath.vhd|
+Z19 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/datapath.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+Z20 DEx4 work 8 datapath 0 22 Dk^00ajKTVSdO7BNXo`EI2
+l114
+L25
+VjD3Y6XJlPOfdee1@fj:aI2
+!s100 Gk[L]G3=Cz68TE`c`cQQe3
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Edmem
+R0
+R1
+R2
+R3
+Z21 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R4
+Z22 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/dmem.vhd
+Z23 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/dmem.vhd
+l0
+L17
+VUbGgc@jFNP^<Sf7Qn6BeX3
+!s100 _5fUYKI0BM60EH>PR@<dB3
+R7
+32
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/dmem.vhd|
+Z25 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/dmem.vhd|
+!i113 1
+R12
+R13
+Admem_arch
+R1
+R2
+R3
+R21
+Z26 DEx4 work 4 dmem 0 22 UbGgc@jFNP^<Sf7Qn6BeX3
+l33
+L24
+VhiDRLRAi95gBX8H_4e9>83
+!s100 l_1m9XWkbQ[C`B<_W_BPd3
+R7
+32
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Eimem
+R0
+R1
+R2
+R3
+R4
+Z27 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/imem.vhd
+Z28 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/imem.vhd
+l0
+L14
+Vez8=bkRNojOVLN;:@]Y[R2
+!s100 Zg=zeS19;9hLQAQYhFJ4]3
+R7
+32
+Z29 !s110 1721408674
+!i10b 1
+Z30 !s108 1721408674.000000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/imem.vhd|
+Z32 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/imem.vhd|
+!i113 1
+R12
+R13
+Aimem_arch
+R1
+R2
+R3
+Z33 DEx4 work 4 imem 0 22 ez8=bkRNojOVLN;:@]Y[R2
+l48
+L20
+V[`gbRoLOhB9Q;<=6kXY5m2
+!s100 03VKebKh^8io;MQCMHP=T0
+R7
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R12
+R13
+Emips
+R0
+R1
+R2
+R3
+R4
+Z34 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mips.vhd
+Z35 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mips.vhd
+l0
+L14
+VX6h@X_:Q9Ka_@E7XO>UTb0
+!s100 RAcN`81IVlIW=CL<@RKLL0
+R7
+32
+R29
+!i10b 1
+R30
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mips.vhd|
+Z37 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mips.vhd|
+!i113 1
+R12
+R13
+Artl
+R20
+R14
+R1
+R2
+R3
+Z38 DEx4 work 4 mips 0 22 X6h@X_:Q9Ka_@E7XO>UTb0
+l39
+L28
+V>:o13kDljHA`WX89`LYz82
+!s100 [HHknbE@7XP5K04X=BWgO2
+R7
+32
+R29
+!i10b 1
+R30
+R36
+R37
+!i113 1
+R12
+R13
+Emux2
+R0
+R1
+R2
+R3
+R4
+Z39 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mux2.vhd
+Z40 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mux2.vhd
+l0
+L14
+VE=5?=NH:76n:DWN93IAm@0
+!s100 h?f^AUE`dCk;Jl0?SzzB=1
+R7
+32
+R29
+!i10b 1
+R30
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mux2.vhd|
+Z42 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/mux2.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 4 mux2 0 22 E=5?=NH:76n:DWN93IAm@0
+l28
+L24
+VUc;:Sc`U`WVQ]zXR7=ic23
+!s100 4WF0W>S=]aLTh2=mMR8k43
+R7
+32
+R29
+!i10b 1
+R30
+R41
+R42
+!i113 1
+R12
+R13
+Epc
+R0
+R1
+R2
+R3
+R4
+Z43 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pc.vhd
+Z44 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pc.vhd
+l0
+L14
+VMI_mKWadZoX4UWA:lPE3E0
+!s100 Z6C5N]LnI<IEBA>Az^:a02
+R7
+32
+R29
+!i10b 1
+R30
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pc.vhd|
+Z46 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pc.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 2 pc 0 22 MI_mKWadZoX4UWA:lPE3E0
+l24
+L22
+V0nP>h;6>cKG?zC<22l?6Y2
+!s100 mG8eGN7?l42O<miXDZ1O51
+R7
+32
+R29
+!i10b 1
+R30
+R45
+R46
+!i113 1
+R12
+R13
+Epc_plus4
+R0
+R1
+R2
+R3
+R4
+Z47 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pcplus4.vhd
+Z48 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pcplus4.vhd
+l0
+L14
+VK^>jV5b]@W7E;N;7bzJ^n1
+!s100 JO9>HcmL=PZ7Tcbk?<@0C2
+R7
+32
+R29
+!i10b 1
+R30
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pcplus4.vhd|
+Z50 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/pcplus4.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 8 pc_plus4 0 22 K^>jV5b]@W7E;N;7bzJ^n1
+l23
+L21
+VBehd7igNcNZF^7iGOlZW^2
+!s100 B[O93SVI0OflIYZ^KG8jS1
+R7
+32
+R29
+!i10b 1
+R30
+R49
+R50
+!i113 1
+R12
+R13
+Eregfile
+Z51 w1721407734
+R1
+R2
+R3
+R4
+Z52 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/regfile.vhd
+Z53 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/regfile.vhd
+l0
+L17
+VTMPG0d[GAkZlb^oUiha4R2
+!s100 73N?_3S2S:gN^e96Lk2d_0
+R7
+32
+R29
+!i10b 1
+R30
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/regfile.vhd|
+Z55 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/regfile.vhd|
+!i113 1
+R12
+R13
+Aregfile_arch
+R1
+R2
+R3
+DEx4 work 7 regfile 0 22 TMPG0d[GAkZlb^oUiha4R2
+l28
+L25
+V>2I]9z:9=L94C6B10Teab0
+!s100 Q3jTjg8h^;PUHCYd3OD0b1
+R7
+32
+R29
+!i10b 1
+R30
+R54
+R55
+!i113 1
+R12
+R13
+Etop
+R0
+R1
+R2
+R3
+R4
+Z56 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/top.vhd
+Z57 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/top.vhd
+l0
+L6
+V41]bVzDgN?m>0keP]H8_n0
+!s100 CO;<1U`Z`NIV?mcKY`5f=1
+R7
+32
+R29
+!i10b 1
+R30
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/top.vhd|
+Z59 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/top.vhd|
+!i113 1
+R12
+R13
+Artl
+R21
+R26
+R38
+R33
+R1
+R2
+R3
+Z60 DEx4 work 3 top 0 22 41]bVzDgN?m>0keP]H8_n0
+l25
+L16
+Z61 Vz^:U`Ba`<O8l_FT@8d6Zf3
+Z62 !s100 gk@UO9GS?_HU_H7LBAjjo1
+R7
+32
+R29
+!i10b 1
+R30
+R58
+R59
+!i113 1
+R12
+R13
+Eual
+Z63 w1721408664
+R1
+R2
+R3
+R4
+Z64 8C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/ual.vhd
+Z65 FC:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/ual.vhd
+l0
+L14
+VNCUB[PSKS:TDMOh>SY5IT3
+!s100 _zXEffzekJbTQfjgWa[UZ0
+R7
+32
+R8
+!i10b 1
+R9
+Z66 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/ual.vhd|
+Z67 !s107 C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Projet3/ual.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 3 ual 0 22 NCUB[PSKS:TDMOh>SY5IT3
+l28
+L22
+VS^NTO^BoJT_`0AmW;:dZ^0
+!s100 z_he^?<ezl:T`UkfPcZJ23
+R7
+32
+R8
+!i10b 1
+R9
+R66
+R67
+!i113 1
+R12
+R13
