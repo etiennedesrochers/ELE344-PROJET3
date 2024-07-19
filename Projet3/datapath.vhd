@@ -89,28 +89,190 @@ architecture rtl of datapath is
     SIGNAL MEM_WB_AluResult     : std_logic_vector(31 DOWNTO 0);
     SIGNAL MEM_WB_readdata      : std_logic_vector(31 DOWNTO 0);
     SIGNAL MEM_WB_instruction   : std_logic_vector(31 DOWNTO 0);
-
-
-
-    --Signaux pour les connections
-    signal PCPLUS4 :std_Logic_vector(31 downto 0);
-    signal PC_s    :std_logic_vector(31 downto 0);
-    signal PCNEXT :std_Logic_vector(31 downto 0);
-    signal SignImmSh: std_logic_vector(31 downto 0);
-    signal SignImm: std_logic_vector(31 downto 0);
-    signal PCBranch: std_logic_vector(31 downto 0);
-    signal PCJUMP: std_logic_vector(31 downto 0);
-    signal PCNextbr: std_logic_vector(31 downto 0);
-    signal WriteReg : std_logic_vector(4 downto 0);
-    signal Result : std_logic_vector(31 downto 0);
-    signal ReadData1: std_logic_vector(31 downto 0); 
-    signal ReadData2: std_logic_vector(31 downto 0);
-    signal srcB : std_logic_vector(31 downto 0);
-    signal AluResult_s : std_logic_vector(31 downto 0);
-    signal PCSrc: std_logic;
-    signal Zero : std_logic;
-    signal cout : std_logic;
     
-begin   
-    --mux 2
+begin    
+
+    mux_IF_PCNextBr: entity work.mux2
+     generic map(
+        N => 32
+    )
+     port map(
+        Input_0 =>IF_PCPlus4 ,
+        Input_1 => EX_PCBranch,
+        sel => EX_PCSrc,
+        out1 => IF_PCNextBr 
+    );
+
+    mux_ : entity work.mux2
+    generic map(
+       N => 32
+   )
+    port map(
+       Input_0 => IF_PCNextBr ,
+       Input_1 => ID_PCJump ,
+       sel => ID_JUMP,
+       out1 => IF_PCNext  
+   );
+
+    --Bascule disponinble dans le fichier pc.vhd
+    PC_bascule: entity work.PC
+     port map(
+        Clk => Clk,
+        RESET => RESET,
+        PC_IN =>  IF_PCNext,
+        PC_OUT =>  IF_PC
+    );
+
+    --Addionne 4 à la valeur du pc pour passer au pc suivant, pcplus4.vhd
+    PC_Plus4_inst: entity work.PC_Plus4
+     port map(
+        PC => IF_PC,
+        PC_OUT => IF_PCPlus4  
+    );
+    ifid_ :entity work.IFId
+    port map (
+        clk   => CLK,
+        reset => RESET,
+        pc_plus4=> IF_PCPlus4,  
+        instruction=> Instruction,
+        pc_plus4_o=> IF_ID_PCPlus4,
+        instruction_o=>IF_ID_Instruction
+    );
+    
+
+    --PCBRANCH
+    EX_PCBranch<= std_logic_vector(unsigned(IF_ID_PCPlus4) + unsigned(EX_SignImmSh));
+    --PC JUMP 
+    ID_PCJump  <= IF_ID_PCPlus4(31 downto 28) & IF_ID_Instruction(25 downto 0) & "00";
+
+    --Signau contenant Instruction(15 downto 0)
+    ID_SignImm <= ((16 downto 0 => IF_ID_Instruction(15)) ) & (IF_ID_Instruction(14 downto 0)) ;
+    --Shift left 2 sur SignImm
+    EX_SignImmSh   <= ID_EX_SignImm (29 downto 0) &"00";
+    --Et logic pour un multiplexeur(mux_PCNEXTBR)
+    EX_PCSrc  <=  ID_EX_Branch and EX_Zero;
+   
+    --Multiplexeur 2 entrée
+    mux_PCNEXTBR: entity work.mux2
+     generic map(
+        N => 32
+    )
+     port map(
+        Input_0 => PCPLUS4,
+        Input_1 => PCBranch,
+        sel => PCSrc,
+        out1 => PCNextbr
+    );
+    --Multiplexeur 2 entrée
+    mux_Jump: entity work.mux2
+     generic map(
+        N => 32
+    )
+     port map(
+        Input_0 => PCNextbr,
+        Input_1 => PCJUMP,
+        sel => JUMP,
+        out1 => PCNEXT
+    );
+
+
+    --Muliplexeur pour l'entrée Write register du registre
+    mux_WriteReg 
+    : entity work.mux2
+     generic map(
+        N => 5
+    )
+     port map(
+        Input_0 => IF_ID_Instruction(20 downto 16),
+        Input_1 =>  IF_ID_Instruction(15 downto 11),
+        sel => RegDst,
+        out1 => WriteReg
+    );
+    ID_rs <= IF_ID_Instruction(25 downto 21);
+    ID_rt <= IF_ID_Instruction(20 downto 16);
+    ID_rt <= IF_ID_Instruction(15 downto 11);
+    --Registre fournis dans le cours
+    RegFile_inst: entity work.RegFile
+     port map(
+        clk => clk,
+        we => RegWrite,
+        ra1 => ID_rs ,
+        ra2 => ID_rt,
+        we => MEM_WB_RegWrite,
+        wa => TOFIND,
+        wd => TOFIND,
+        rd1 => ID_rd1 ,
+        rd2 => ID_rd2 
+    );
+  
+
+    IDEX_inst : entity work.IDEX
+    port map (
+        clk   <= CLK,
+        reset <= RESET,
+        wb <= todo,
+        m <= todo,
+        ex<= todo,
+        plus4 <= IF_ID_PCPlus4,
+        rd1<=ID_rd1,
+        rd2<=ID_rd2,
+        SignImm <= ID_SignImm,
+        rs <= ID_RS,
+        rt <= ID_RT,
+        rd <= ID_RD,
+
+        plus4o     <=ID_EX_PCPlus4,
+        rd1o       <=ID_EX_rd1 ,
+        rd2o       <= ID_EX_rd2,
+        SignImmo   <=ID_EX_SignImm,
+        rso         <=ID_EX_rs,
+        rto         <=ID_EX_rt,
+        rdo         <=ID_EX_rd,
+        wbo <= todo,
+        mo <= todo,
+        exo<= todo
+    );
+    --Multiplexeur 2 entrée
+    mux_Result: entity work.mux2
+     generic map(
+        N => 32
+    )
+     port map(
+        Input_1 => ReadData,
+        Input_0 =>AluResult_s,
+        sel => MemToReg,
+        out1 => Result
+    );
+    --Multiplexeur 2 entrée
+    mux_srcB: entity work.mux2
+    generic map (
+      N => 32
+    )
+    port map (
+      Input_0 => ReadData2,
+      Input_1 => SignImm,
+      sel     => AluSrc,
+      out1    => srcB
+    );
+    --ALU réalisé dans le cadre du projet 1
+    UAL_inst: entity work.UAL
+     generic map(
+        N => 32
+    )
+     port map(
+        ualControl => AluControl,
+        srcA => ReadData1,
+        srcB => srcB,
+        result => AluResult_s,
+        cout => cout,
+        zero =>  EX_Zero  
+    );
+
+    --Assignation des sortie et autres signaux
+    AluResult <= AluResult_s;
+    WriteData <= ReadData2;
+    Pc <= IF_PC;
+    MemReadOut<= MemReadIn;
+    MemWriteOut <= MemWriteIn;
+    
 end architecture;
