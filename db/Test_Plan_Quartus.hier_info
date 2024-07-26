@@ -1,0 +1,8 @@
+|Bloc1
+2 <= <GND>
+1 => ~NO_FANOUT~
+4 => ~NO_FANOUT~
+5 => ~NO_FANOUT~
+6 => ~NO_FANOUT~
+
+
