@@ -19,7 +19,7 @@ architecture rtl of Bloc1 is
     signal s_7 : std_logic_vector(31 downto 0);
     signal s_54 : std_logic_vector(31 downto 0);
 begin
-
+ 
     mux2_inst1: entity work.mux2
      generic map(
         N => 32

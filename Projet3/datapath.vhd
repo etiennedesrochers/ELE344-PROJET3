@@ -59,7 +59,7 @@ architecture rtl of datapath is
     SIGNAL ID_EX_AluSrc         : std_logic;
     SIGNAL ID_EX_RegDst         : std_logic;
     SIGNAL ID_EX_AluControl     : std_logic_vector(3 DOWNTO 0);
-    SIGNAL EX_WriteReg          : std_logic_vector(4 DOWNTO 0);
+    SIGNAL EX_WriteReg          : std_logic_vector(4 downto 0);
     SIGNAL ID_EX_rt             : std_logic_vector(4 DOWNTO 0);
     SIGNAL ID_EX_rs             : std_logic_vector(4 DOWNTO 0);
     SIGNAL ID_EX_rd1            : std_logic_vector(31 DOWNTO 0);
@@ -83,256 +83,119 @@ architecture rtl of datapath is
     SIGNAL EX_MEM_WriteReg      : std_logic_vector(4 DOWNTO 0);
     SIGNAL EX_MEM_instruction   : std_logic_vector(31 DOWNTO 0);
     SIGNAL WB_Result            : std_logic_vector(31 DOWNTO 0);
-    SIGNAL MEM_WB_WriteReg      : std_logic;
+    SIGNAL MEM_WB_WriteReg      : std_logic_vector(4 downto 0);
     SIGNAL MEM_WB_MemtoReg      : std_logic;
     SIGNAL MEM_WB_RegWrite      : std_logic;
     SIGNAL MEM_WB_AluResult     : std_logic_vector(31 DOWNTO 0);
     SIGNAL MEM_WB_readdata      : std_logic_vector(31 DOWNTO 0);
     SIGNAL MEM_WB_instruction   : std_logic_vector(31 DOWNTO 0);
+    SIGNAL ID_MEM_MemWrite      : std_logic;
     
 begin    
-
-    mux_IF_PCNextBr: entity work.mux2
-     generic map(
-        N => 32
-    )
-     port map(
-        Input_0 =>IF_PCPlus4 ,
-        Input_1 => EX_PCBranch,
-        sel => EX_PCSrc,
-        out1 => IF_PCNextBr 
+    b1 : entity work.Bloc1
+    port map (
+        clk   =>CLK,
+        reset => RESET,
+        EX_PCBranch => EX_PCBranch,
+        ID_PCJump =>ID_PCJump,
+        EX_PCSrc=>EX_PCSrc,
+        ID_Jump =>ID_Jump,
+        IF_PCPlus4 =>IF_PCPlus4,
+        pc_s=>PC
     );
 
-    mux_ : entity work.mux2
-    generic map(
-       N => 32
-   )
+    Bloc2_inst: entity work.Bloc2
     port map(
-       Input_0 => IF_PCNextBr ,
-       Input_1 => ID_PCJump ,
-       sel => ID_JUMP,
-       out1 => IF_PCNext  
+       clk => clk,
+       reset => reset,
+       IF_ID_PCPlus4 => IF_ID_PCPlus4,
+       Instruction => Instruction,
+       WB_Result => WB_Result,
+       MEM_WB_WriteReg => MEM_WB_WriteReg,
+       MEM_WB_RegWrite => MEM_WB_RegWrite,
+       ID_MemtoReg => ID_MemtoReg,
+       ID_MemWrite => ID_MemWrite,
+       ID_EX_PCPlus4 => ID_EX_PCPlus4,
+       ID_rd1 => ID_rd1,
+       ID_rd2 => ID_rd2,
+       ID_PCJump => ID_PCJump,
+       ID_EX_SignImm => ID_EX_SignImm,
+       ID_EX_AluControl => ID_EX_AluControl,
+       ID_EX_rt => ID_EX_rt,
+       ID_EX_rd => ID_EX_rd,
+       ID_EX_rs => ID_EX_rs
    );
 
-    --Bascule disponinble dans le fichier pc.vhd
-    PC_bascule: entity work.PC
-     port map(
-        Clk => Clk,
-        RESET => RESET,
-        PC_IN =>  IF_PCNext,
-        PC_OUT =>  IF_PC
-    );
+   Bloc3_inst: entity work.Bloc3
+   port map(
+      clk => clk,
+      reset => reset,
+      ID_EX_PCPlus4 => ID_EX_PCPlus4,
+      ID_EX_rd1 => ID_EX_rd1,
+      ID_EX_rd2 => ID_EX_rd2,
+      ID_EX_SignImm => ID_EX_SignImm,
+      WB_Result => WB_Result,
+      EX_MEM_AluResult => EX_MEM_AluResult,
+      ID_EX_rs => ID_EX_rs,
+      ID_EX_rt => ID_EX_rt,
+      ID_EX_rd => ID_EX_rd,
+      EX_MEM_WriteReg => EX_MEM_WriteReg,
+      MEM_WB_WriteReg => MEM_WB_WriteReg,
+      ID_MEM_MemWrite => ID_MEM_MemWrite,
+      ID_EX_RegDst => RegDst,
+      ID_EX_AluSrc => AluSrc,
+      ID_EX_Branch => Branch,
+      ID_EX_RegWrite => RegWrite,
+      ID_EX_MemtoReg => MemToReg,
+      ID_EX_MemWrite => MemWriteIn,
+      ID_EX_MemRead => MemReadIn,
+      EX_AluResult => EX_AluResult,
+      EX_PCBranch => EX_PCBranch,
+      EX_WriteReg => EX_WriteReg,
+      EX_MEM_RegWrite => EX_MEM_RegWrite,
+      EX_PCSrc => EX_PCSrc,
+      EX_MEM_MemtoReg => EX_MEM_MemtoReg,
+      EX_MEM_MemWrite => EX_MEM_MemWrite,
+      EX_MEM_MemRead => EX_MEM_MemRead,
+      ID_EX_AluControl => AluControl
+  );
+Bloc4_inst: entity work.Bloc4
+ port map(
+    clk => clk,
+    reset => reset,
+    EX_MEM_AluResult => EX_AluResult,
+    EX_MEM_preSrcB => EX_MEM_preSrcB,
+    EX_MEM_WriteReg => EX_MEM_WriteReg,
+    EX_MEM_MemRead => EX_MEM_MemRead,
+    EX_MEM_MemtoReg => EX_MEM_MemtoReg,
+    EX_MEM_RegWrite => EX_MEM_RegWrite,
+    EX_MEM_MemWrite => EX_MEM_MemWrite,
+    EX_MEM_AluResult_o => EX_MEM_AluResult,
+    MEM_WB_AluResult => MEM_WB_AluResult,
+    MEM_WB_readdata => MEM_WB_readdata,
+    MEM_WB_WriteReg => EX_MEM_WriteReg,
+    MEM_WB_WriteReg_o => MEM_WB_WriteReg,
+    MEM_WB_RegWrite => MEM_WB_RegWrite,
+    MEM_WB_MemtoReg => MEM_WB_MemtoReg,
+    DMEM_MEMWRITE => MemWriteOut,
+    DMEM_MEMREAD => MemReadOut,
+    DMEM_PRESRCB => WriteData,
+    DMEM_ALURESULT => AluResult,
+    DMEM_RESULT => ReadData
+);                     
 
-    --Addionne 4 à la valeur du pc pour passer au pc suivant, pcplus4.vhd
-    PC_Plus4_inst: entity work.PC_Plus4
-     port map(
-        PC => IF_PC,
-        PC_OUT => IF_PCPlus4  
-    );
-    ifid_ :entity work.IFId
-    port map (
-        clk   => CLK,
-        reset => RESET,
-        pc_plus4=> IF_PCPlus4,  
-        instruction=> Instruction,
-        pc_plus4_o=> IF_ID_PCPlus4,
-        instruction_o=>IF_ID_Instruction
-    );
-    
-
-    --PCBRANCH
-    EX_PCBranch<= std_logic_vector(unsigned(IF_ID_PCPlus4) + unsigned(EX_SignImmSh));
-    --PC JUMP 
-    ID_PCJump  <= IF_ID_PCPlus4(31 downto 28) & IF_ID_Instruction(25 downto 0) & "00";
-
-    --Signau contenant Instruction(15 downto 0)
-    ID_SignImm <= ((16 downto 0 => IF_ID_Instruction(15)) ) & (IF_ID_Instruction(14 downto 0)) ;
-    --Shift left 2 sur SignImm
-    EX_SignImmSh   <= ID_EX_SignImm (29 downto 0) &"00";
-    --Et logic pour un multiplexeur(mux_PCNEXTBR)
-    EX_PCSrc  <=  ID_EX_Branch and EX_Zero;
-   
-    --Multiplexeur 2 entrée
-    mux_PCNEXTBR: entity work.mux2
-     generic map(
-        N => 32
-    )
-     port map(
-        Input_0 => PCPLUS4,
-        Input_1 => PCBranch,
-        sel => PCSrc,
-        out1 => PCNextbr
-    );
-    --Multiplexeur 2 entrée
-    mux_Jump: entity work.mux2
-     generic map(
-        N => 32
-    )
-     port map(
-        Input_0 => PCNextbr,
-        Input_1 => PCJUMP,
-        sel => JUMP,
-        out1 => PCNEXT
-    );
-
-
-    --Muliplexeur pour l'entrée Write register du registre
-    mux_WriteReg 
-    : entity work.mux2
-     generic map(
-        N => 5
-    )
-     port map(
-        Input_0 => IF_ID_Instruction(20 downto 16),
-        Input_1 =>  IF_ID_Instruction(15 downto 11),
-        sel => RegDst,
-        out1 => WriteReg
-    );
-    ID_rs <= IF_ID_Instruction(25 downto 21);
-    ID_rt <= IF_ID_Instruction(20 downto 16);
-    ID_rt <= IF_ID_Instruction(15 downto 11);
-    --Registre fournis dans le cours
-    RegFile_inst: entity work.RegFile
-     port map(
-        clk => clk,
-        we => RegWrite,
-        ra1 => ID_rs ,
-        ra2 => ID_rt,
-        we => MEM_WB_RegWrite,
-        wa => TOFIND,
-        wd => TOFIND,
-        rd1 => ID_rd1 ,
-        rd2 => ID_rd2 
-    );
-  
-
-    IDEX_inst : entity work.IDEX
-    port map (
-        clk   <= CLK,
-        reset <= RESET,
-        wb <= todo,
-        m <= todo,
-        ex<= todo,
-        plus4 <= IF_ID_PCPlus4,
-        rd1<=ID_rd1,
-        rd2<=ID_rd2,
-        SignImm <= ID_SignImm,
-        rs <= ID_RS,
-        rt <= ID_RT,
-        rd <= ID_RD,
-
-        plus4o     <=ID_EX_PCPlus4,
-        rd1o       <=ID_EX_rd1 ,
-        rd2o       <= ID_EX_rd2,
-        SignImmo   <=ID_EX_SignImm,
-        rso         <=ID_EX_rs,
-        rto         <=ID_EX_rt,
-        rdo         <=ID_EX_rd,
-        wbo <= todo,
-        mo <= todo,
-        exo<= todo
-    );
-    --Multiplexeur 2 entrée
-    mux_Result: entity work.mux2
-     generic map(
-        N => 32
-    )
-     port map(
-        Input_1 => ReadData,
-        Input_0 =>AluResult_s,
-        sel => MemToReg,
-        out1 => Result
-    );
-    --Multiplexeur 2 entrée
-    mux_srcB: entity work.mux2
-    generic map (
-      N => 32
-    )
-    port map (
-      Input_0 => ReadData2,
-      Input_1 => SignImm,
-      sel     => AluSrc,
-      out1    => srcB
-    );
-    mux3_srca : entity work.mux3
-    generic map (
-        N => 32
-      )
-        port map(
-            Input_0<=ID_EX_rd1,
-            Input_1<=WB_Result ,
-            Input_2<=EX_MEM_AluResult ,
-            sel <= EX_ForwardA,
-            out1 <= EX_SrcA 
-
-        );
-    mux3_srcb : entity work.mux3
-    generic map (
-        N => 32
-      )
-        port map(
-            Input_0<=ID_EX_rd2 ,
-            Input_1<= WB_Result,
-            Input_2<=EX_MEM_AluResult ,
-            sel <= EX_ForwardB,
-            out1 <= EX_preSrcB  
-
-        );
-    mux_srcB1: entity work.mux2
-    generic map (
-      N => 32
-    )
-    port map (
-      Input_0 => EX_preSrcB  ,
-      Input_1 => ID_EX_SignImm,
-      sel     => ID_EX_AluSrc,
-      out1    => EX_SrcB 
-    );
-    --ALU réalisé dans le cadre du projet 1
-    UAL_inst: entity work.UAL
-     generic map(
-        N => 32
-    )
-     port map(
-        ualControl => ID_EX_AluControl,
-        srcA => EX_SrcA,
-        srcB => EX_SrcB,
-        result => EX_AluResult,
-        cout => EX_cout,
-        zero =>  EX_Zero  
-    );
-    mux_3248: entity work.mux2
-    generic map (
-      N => 32
-    )
-    port map (
-      Input_0 => ID_EX_rt   ,
-      Input_1 => ID_EX_rd,
-      sel     => ID_EX_RegDst,
-      out1    => EX_WriteReg 
-    );
-    EXMEm_inst : entity work.EXMEM
-    port map (
-        clk   <=CLK,
-        reset <=RESET,
-        wb<=todo,
-        m <=todo,
-        alu <=EX_AluResult,
-        presrb<=EX_preSrcB,
-        WriteReg <=EX_WriteReg,
-        wbo <=todo,
-        aluo <=EX_MEM_AluResult ,
-        presrbo<=EX_MEM_preSrcB ,
-        WriteRego<=EX_MEM_WriteReg 
-
-
-
-    );
-    --Assignation des sortie et autres signaux
-    AluResult <=EX_MEM_AluResult ;
-    WriteData <= EX_MEM_preSrcB;
-    Pc <= IF_PC;
-    MemReadOut<= MemReadIn;
-    MemWriteOut <= MemWriteIn;
+Bloc5_inst: entity work.Bloc5
+ port map(
+    clk => clk,
+    reset => reset,
+    MEM_WB_readdata => MEM_WB_readdata,
+    MEM_WB_AluResult => MEM_WB_AluResult,
+    MEM_WB_WriteReg => EX_MEM_WriteReg,
+    MEM_WB_MemtoReg => MEM_WB_MemtoReg,
+    WB_Result => WB_Result,
+    MEM_WB_WriteReg_o => MEM_WB_WriteReg,
+    MEM_WB_RegWrite => EX_MEM_RegWrite,
+    MEM_WB_RegWrite_o => MEM_WB_RegWrite
+);
     
 end architecture;
