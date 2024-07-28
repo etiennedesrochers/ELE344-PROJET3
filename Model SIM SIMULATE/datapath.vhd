@@ -85,6 +85,7 @@ architecture rtl of datapath is
     SIGNAL WB_Result            : std_logic_vector(31 DOWNTO 0);
     SIGNAL MEM_WB_WriteReg      : std_logic_vector(4 downto 0);
     SIGNAL t1      : std_logic_vector(4 downto 0);
+    signal t2: std_logic_vector(31 downto 0);
     SIGNAL MEM_WB_MemtoReg      : std_logic;
     SIGNAL MEM_WB_RegWrite      : std_logic;
     SIGNAL MEM_WB_AluResult     : std_logic_vector(31 DOWNTO 0);
@@ -135,7 +136,7 @@ port map(
       ID_EX_rd2 => ID_EX_rd2,
       ID_EX_SignImm => ID_EX_SignImm,
       WB_Result => WB_Result,
-      EX_MEM_AluResult => EX_MEM_AluResult,
+      EX_MEM_AluResult => t2,
       ID_EX_rs => ID_EX_rs,
       ID_EX_rt => ID_EX_rt,
       ID_EX_rd => ID_EX_rd,
@@ -163,14 +164,14 @@ Bloc4_inst: entity work.Bloc4
  port map(
     clk => clk,
     reset => reset,
-    EX_MEM_AluResult => EX_AluResult,
+    EX_MEM_AluResult => EX_MEM_AluResult,
     EX_MEM_preSrcB => EX_MEM_preSrcB,
     EX_MEM_WriteReg => EX_MEM_WriteReg,
     EX_MEM_MemRead => EX_MEM_MemRead,
     EX_MEM_MemtoReg => EX_MEM_MemtoReg,
     EX_MEM_RegWrite => EX_MEM_RegWrite,
     EX_MEM_MemWrite => EX_MEM_MemWrite,
-    EX_MEM_AluResult_o => EX_MEM_AluResult,
+    EX_MEM_AluResult_o => t2,
     MEM_WB_AluResult => MEM_WB_AluResult,
     MEM_WB_readdata => MEM_WB_readdata,
     MEM_WB_WriteReg => MEM_WB_WriteReg,

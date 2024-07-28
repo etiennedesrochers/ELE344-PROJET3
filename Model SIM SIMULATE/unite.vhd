@@ -17,7 +17,7 @@ process (EX_MEM_RegWrite,ID_EX_rs, ID_EX_rt, EX_MEM_WriteReg, MEM_WB_WriteReg,ME
 begin
     if(EX_MEM_RegWrite ='1' and (EX_MEM_WriteReg /= "0000") and (EX_MEM_WriteReg = ID_EX_rs)) then
             Forward_A <= "10";
-    elsif (MEM_WB_REGWRTIE /="0" and  EX_MEM_WriteReg /= "0000" and MEM_WB_WriteReg = ID_EX_rs) then
+    elsif (MEM_WB_REGWRTIE /="0000" and  EX_MEM_WriteReg /= "0000" and MEM_WB_WriteReg = ID_EX_rs) then
             Forward_A <= "01";
     else 
         Forward_A <= "00";    
@@ -25,7 +25,7 @@ begin
 
     if(EX_MEM_RegWrite ='1' and EX_MEM_WriteReg /= "0000" and EX_MEM_WriteReg = ID_EX_rt) then
         Forward_B <= "10";
-    elsif(MEM_WB_REGWRTIE/="0"  and  EX_MEM_WriteReg /= "0000" and MEM_WB_WriteReg = ID_EX_rt) then
+    elsif(MEM_WB_REGWRTIE/="0000"  and  EX_MEM_WriteReg /= "0000" and MEM_WB_WriteReg = ID_EX_rt) then
         Forward_B <= "01";
     else 
         Forward_B <= "00";

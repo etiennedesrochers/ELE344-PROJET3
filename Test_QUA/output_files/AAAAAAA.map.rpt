@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AAAAAAA
-Fri Jul 26 17:27:58 2024
+Fri Jul 26 17:41:28 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -58,15 +58,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul 26 17:27:58 2024          ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul 26 17:41:28 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; AAAAAAA                                        ;
 ; Top-level Entity Name              ; top                                            ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 244                                            ;
-;     Total combinational functions  ; 188                                            ;
-;     Dedicated logic registers      ; 107                                            ;
-; Total registers                    ; 107                                            ;
+; Total logic elements               ; 63                                             ;
+;     Total combinational functions  ; 39                                             ;
+;     Dedicated logic registers      ; 40                                             ;
+; Total registers                    ; 40                                             ;
 ; Total pins                         ; 98                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -211,20 +211,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 244       ;
+; Estimated Total logic elements              ; 63        ;
 ;                                             ;           ;
-; Total combinational functions               ; 188       ;
+; Total combinational functions               ; 39        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 135       ;
-;     -- 3 input functions                    ; 41        ;
-;     -- <=2 input functions                  ; 12        ;
+;     -- 4 input functions                    ; 30        ;
+;     -- 3 input functions                    ; 7         ;
+;     -- <=2 input functions                  ; 2         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 156       ;
-;     -- arithmetic mode                      ; 32        ;
+;     -- normal mode                          ; 39        ;
+;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 107       ;
-;     -- Dedicated logic registers            ; 107       ;
+; Total registers                             ; 40        ;
+;     -- Dedicated logic registers            ; 40        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 98        ;
@@ -232,30 +232,25 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 107       ;
-; Total fan-out                               ; 1136      ;
-; Average fan-out                             ; 2.29      ;
+; Maximum fan-out                             ; 40        ;
+; Total fan-out                               ; 395       ;
+; Average fan-out                             ; 1.42      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
-+---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                         ; Entity Name ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------+-------------+--------------+
-; |top                            ; 188 (0)             ; 107 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 98   ; 0            ; 0          ; |top                                                                        ; top         ; work         ;
-;    |imem:imem_inst|             ; 39 (39)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|imem:imem_inst                                                         ; imem        ; work         ;
-;    |mips:mips_inst|             ; 149 (0)             ; 107 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst                                                         ; mips        ; work         ;
-;       |control:control_inst|    ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|control:control_inst                                    ; control     ; work         ;
-;       |datapath:data_path_inst| ; 139 (0)             ; 107 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst                                 ; datapath    ; work         ;
-;          |Bloc1:Bloc1_inst|     ; 0 (0)               ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst                ; Bloc1       ; work         ;
-;             |PC:pc_i|           ; 0 (0)               ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i        ; PC          ; work         ;
-;          |Bloc2:Bloc2_inst|     ; 0 (0)               ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst                ; Bloc2       ; work         ;
-;          |Bloc3:Bloc3_inst|     ; 139 (0)             ; 35 (35)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst                ; Bloc3       ; work         ;
-;             |UAL:UAL_inst|      ; 107 (107)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|UAL:UAL_inst   ; UAL         ; work         ;
-;             |mux3:mux3_inst|    ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|mux3:mux3_inst ; mux3        ; work         ;
-;          |Bloc4:Bloc4_inst|     ; 0 (0)               ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst                ; Bloc4       ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                  ; Entity Name ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-------------+--------------+
+; |top                            ; 39 (0)              ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 98   ; 0            ; 0          ; |top                                                                 ; top         ; work         ;
+;    |imem:imem_inst|             ; 38 (38)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|imem:imem_inst                                                  ; imem        ; work         ;
+;    |mips:mips_inst|             ; 1 (0)               ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst                                                  ; mips        ; work         ;
+;       |datapath:data_path_inst| ; 1 (0)               ; 40 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst                          ; datapath    ; work         ;
+;          |Bloc1:Bloc1_inst|     ; 0 (0)               ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst         ; Bloc1       ; work         ;
+;             |PC:pc_i|           ; 0 (0)               ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i ; PC          ; work         ;
+;          |Bloc2:Bloc2_inst|     ; 1 (1)               ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst         ; Bloc2       ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -328,244 +323,205 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_SignImm[30]               ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[31]     ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[0..4]           ; Stuck at GND due to stuck port data_in                                                   ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_preSrcB[0..31]           ; Stuck at GND due to stuck port data_in                                                   ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[0..31]         ; Stuck at GND due to stuck port data_in                                                   ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[0..31]                ; Stuck at GND due to stuck port data_in                                                   ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[0..31]         ; Stuck at GND due to stuck port data_in                                                   ;
+; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[0..31]         ; Stuck at GND due to stuck port data_in                                                   ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[0..31]          ; Stuck at GND due to stuck port data_in                                                   ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[0..4]           ; Stuck at GND due to stuck port data_in                                                   ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[0..31]                ; Stuck at GND due to stuck port data_in                                                   ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[0..31]              ; Lost fanout                                                                              ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[0..27]            ; Lost fanout                                                                              ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCSrc                        ; Lost fanout                                                                              ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluSrc                    ; Lost fanout                                                                              ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluControl[0,1]           ; Lost fanout                                                                              ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[2..16]               ; Lost fanout                                                                              ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluControl[2]             ; Lost fanout                                                                              ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[31]                  ; Lost fanout                                                                              ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[0,1,21,22,26,27] ; Stuck at GND due to stuck port data_in                                                   ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[0]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[0]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[1]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[1]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[2]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[2]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[3]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[3]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[4]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[4]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[5]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[5]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[6]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[6]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[7]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[7]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[8]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[8]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[9]                    ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[9]             ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[10]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[10]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[11]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[11]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[12]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[12]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[13]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[13]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[14]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[14]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[15]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[15]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[16]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[16]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[17]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[17]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[18]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[18]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[19]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[19]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[20]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[20]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[21]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[21]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[22]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[22]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[23]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[23]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[24]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[24]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[25]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[25]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[26]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[26]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[27]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[27]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[28]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[28]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[29]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[29]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[30]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[30]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[31]                   ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[31]            ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_MemtoReg                 ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_MemtoReg                 ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_MemtoReg                 ; Lost fanout                                                                              ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[2]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[2]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[3]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[3]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[4]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[4]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[5]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[5]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[6]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[6]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[7]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[7]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[8]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[8]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[9]                   ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[9]  ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[10]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[10] ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[11]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[11] ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[12]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[12] ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[13]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[13] ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[14]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[14] ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[15]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[15] ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[16]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[16] ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[31]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[17] ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_SignImm[6..10]               ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_SignImm[4]      ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_SignImm[31]                  ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_SignImm[14]     ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[8..12]           ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[6]  ;
 ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[17]              ; Merged with mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[16] ;
-; Total Number of Removed Registers = 365                                                   ;                                                                                          ;
+; Total Number of Removed Registers = 429                                                   ;                                                                                          ;
 +-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                ;
-+-------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
-; Register name                                                                 ; Reason for Removal        ; Registers Removed due to This Register                                         ;
-+-------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluControl[3] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[0],        ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[1],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[2],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[3],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[4],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[5],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[6],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[7],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[8],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[9],        ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[10],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[11],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[12],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[13],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[14],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[15],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[16],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[17],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[18],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[19],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[20],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[21],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[22],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[23],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[24],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[31]        ;
-; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_preSrcB[0]   ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[0],  ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[1],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[2],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[3],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[4],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[5],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[6],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[7],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[8],  ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[0], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[1], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[2], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[3], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[4], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[5], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[6], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[7], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[8], ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_MemtoReg,     ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_MemtoReg,     ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_MemtoReg      ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[1]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[27],   ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[26],   ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[25],   ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[24]    ;
-; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[0]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[0],      ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[0],    ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCSrc,            ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[0]    ;
-; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_EX_rs[4]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[25],       ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[26],       ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[27]        ;
-; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[1]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[1],      ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[1],    ;
-;                                                                               ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[1]    ;
-; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[27]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[27],     ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[27]   ;
-; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[26]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[26],     ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[26]   ;
-; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[22]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[22],     ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[22]   ;
-; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[21]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[21],     ;
-;                                                                               ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[21]   ;
-; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[1]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[1]   ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[0]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[0]   ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[2]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[2]   ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[3]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[3]   ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[4]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[4]   ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[31]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluSrc         ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[30]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[30]        ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[29]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[29]        ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[28]       ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[28]        ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[9]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[9]  ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[10] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[10] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[11] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[11] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[12] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[12] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[13] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[13] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[14] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[14] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[15] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[15] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[16] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[16] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[17] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[17] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[18] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[18] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[19] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[19] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[20] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[20] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[21] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[21] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[22] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[22] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[23] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[23] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[24] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[24] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[25] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[25] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[26] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[26] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[27] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[27] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[28] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[28] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[29] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[29] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[30] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[30] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[31] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[31] ;
-;                                                                               ; due to stuck port data_in ;                                                                                ;
-+-------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                  ;
++--------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; Register name                                                                  ; Reason for Removal        ; Registers Removed due to This Register                                          ;
++--------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_preSrcB[0]    ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[0],   ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[1],   ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[2],   ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[3],   ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[4],   ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[5],   ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[6],   ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[7],   ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_readdata[8]    ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[1]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[27],    ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[26],    ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[25],    ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[24]     ;
+; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[0]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[0],       ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[0],     ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCSrc,             ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[0]     ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluControl[3]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluControl[1],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluControl[0],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluControl[2]   ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[23] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[23], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[23], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[23]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[24] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[24], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[24], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[24]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[25] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[25], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[25], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[25]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[26] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[26], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[26], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[26]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[1]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[1],       ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[1],     ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[1]     ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[27] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[27], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[27], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[27]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[28] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[28], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[28], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[28]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[29] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[29], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[29], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[29]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[30] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[30], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[30], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[30]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[31] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[31], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[31], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[31]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[0]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[0],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[0],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[0]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[1]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[1],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[1],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[1]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[2]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[2],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[2],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[2]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[3]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[3],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[3],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[3]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[4]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[4],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[4],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[4]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[5]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[5],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[5],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[5]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[6]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[6],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[6],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[6]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[7]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[7],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[7],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[7]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[8]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[8],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[8],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[8]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[9]  ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[9],  ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[9],  ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[9]          ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[10] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[10], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[10], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[10]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[11] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[11], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[11], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[11]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[12] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[12], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[12], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[12]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[13] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[13], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[13], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[13]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[14] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[14], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[14], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[14]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[15] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[15], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[15], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[15]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[16] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[16], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[16], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[16]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[17] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[17], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[17], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[17]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[18] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[18], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[18], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[18]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[19] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[19], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[19], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[19]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[20] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[20], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[20], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[20]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[21] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[21], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[21], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[21]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_AluResult[22] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_MEM_AluResult[22], ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_AluResult[22], ;
+;                                                                                ;                           ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_WB_Result[22]         ;
+; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[27]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[27],      ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[27]    ;
+; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[26]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[26],      ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[26]    ;
+; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[22]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[22],      ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[22]    ;
+; mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_ID_PCJump[21]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_EX_PCBranch[21],      ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[21]    ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[31]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_AluSrc,         ;
+;                                                                                ; due to stuck port data_in ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[31]        ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[1]   ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[1]    ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[0]   ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[0]    ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[2]   ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[2]    ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[3]   ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[3]    ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst|s_EX_MEM_WriteReg[4]   ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst|s_MEM_WB_WriteReg[4]    ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[14]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[16]        ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[13]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[15]        ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[12]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[14]        ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[11]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[13]        ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[10]        ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[12]        ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[9]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[11]        ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[8]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[10]        ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[7]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[9]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[6]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[8]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[5]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[7]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[4]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[6]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[3]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[5]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[2]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[4]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[1]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[3]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
+; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|s_ID_EX_rd1[0]         ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|EX_SignImmSh[2]         ;
+;                                                                                ; due to stuck port data_in ;                                                                                 ;
++--------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -573,10 +529,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 107   ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 75    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 40    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -589,10 +545,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[0]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[21] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[22] ;
 ; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i|PC_Value[6]  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|mux3:mux3_inst|Mux31 ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|UAL:UAL_inst|Mux18   ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst|UAL:UAL_inst|Mux19   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
 
 
@@ -694,13 +649,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst"                                   ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; ex_writereg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst"                                    ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; ex_aluresult ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ex_writereg  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -719,22 +675,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 98                          ;
-; cycloneiii_ff         ; 107                         ;
-;     CLR               ; 75                          ;
-;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 193                         ;
-;     arith             ; 32                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 31                          ;
-;     normal            ; 161                         ;
+; cycloneiii_ff         ; 40                          ;
+;     CLR               ; 39                          ;
+;     CLR SLD           ; 1                           ;
+; cycloneiii_lcell_comb ; 44                          ;
+;     normal            ; 44                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 135                         ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 30                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.10                        ;
-; Average LUT depth     ; 3.47                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -753,9 +706,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Jul 26 17:27:46 2024
+    Info: Processing started: Fri Jul 26 17:41:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AAAAAAA -c AAAAAAA
-Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/23.1std/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/model sim simulate/unite.vhd
@@ -824,20 +776,22 @@ Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(39): object "ID_rd2
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(40): used implicit default value for signal "ID_Jump" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 40
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(41): used implicit default value for signal "ID_MemtoReg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 41
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(42): used implicit default value for signal "ID_MemWrite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 42
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(57): object "EX_AluResult" assigned a value but never read File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 57
 Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(62): object "EX_WriteReg" assigned a value but never read File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 62
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(65): used implicit default value for signal "ID_EX_rd1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 65
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(74): used implicit default value for signal "ID_EX_rd2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 74
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(77): used implicit default value for signal "EX_MEM_AluResult" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 77
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(82): used implicit default value for signal "EX_MEM_preSrcB" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 82
 Warning (10541): VHDL Signal Declaration warning at datapath.vhd(83): used implicit default value for signal "EX_MEM_WriteReg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 83
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(93): used implicit default value for signal "ID_MEM_MemWrite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 93
-Info (12128): Elaborating entity "Bloc1" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 96
+Warning (10541): VHDL Signal Declaration warning at datapath.vhd(94): used implicit default value for signal "ID_MEM_MemWrite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 94
+Info (12128): Elaborating entity "Bloc1" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 97
 Info (12128): Elaborating entity "mux2" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|mux2:mux2_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc1.vhd Line: 22
 Info (12128): Elaborating entity "PC" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC:pc_i" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc1.vhd Line: 44
 Info (12128): Elaborating entity "PC_Plus4" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc1:Bloc1_inst|PC_Plus4:pc_plus4" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc1.vhd Line: 54
-Info (12128): Elaborating entity "Bloc2" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 108
+Info (12128): Elaborating entity "Bloc2" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 109
 Warning (10492): VHDL Process Statement warning at Bloc2.vhd(49): signal "reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc2.vhd Line: 49
 Info (12128): Elaborating entity "RegFile" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|RegFile:RegFile_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc2.vhd Line: 64
-Info (12128): Elaborating entity "Bloc3" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 129
+Info (12128): Elaborating entity "Bloc3" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc3:Bloc3_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 130
 Warning (10036): Verilog HDL or VHDL warning at Bloc3.vhd(23): object "s_ID_EX_RegWrite" assigned a value but never read File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc3.vhd Line: 23
 Warning (10036): Verilog HDL or VHDL warning at Bloc3.vhd(26): object "s_ID_EX_MemRead" assigned a value but never read File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc3.vhd Line: 26
 Warning (10036): Verilog HDL or VHDL warning at Bloc3.vhd(27): object "s_ID_EX_Branch" assigned a value but never read File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc3.vhd Line: 27
@@ -855,8 +809,8 @@ Warning (10620): VHDL warning at unite.vhd(18): comparison between unequal lengt
 Warning (10620): VHDL warning at unite.vhd(20): comparison between unequal length operands always returns TRUE File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/unite.vhd Line: 20
 Warning (10620): VHDL warning at unite.vhd(26): comparison between unequal length operands always returns TRUE File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/unite.vhd Line: 26
 Warning (10620): VHDL warning at unite.vhd(28): comparison between unequal length operands always returns TRUE File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/unite.vhd Line: 28
-Info (12128): Elaborating entity "Bloc4" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 162
-Info (12128): Elaborating entity "Bloc5" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 186
+Info (12128): Elaborating entity "Bloc4" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc4:Bloc4_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 163
+Info (12128): Elaborating entity "Bloc5" for hierarchy "mips:mips_inst|datapath:data_path_inst|Bloc5:Bloc5_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/datapath.vhd Line: 187
 Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 45
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "PC[0]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 10
@@ -897,8 +851,40 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "WriteData[29]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 11
     Warning (13410): Pin "WriteData[30]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 11
     Warning (13410): Pin "WriteData[31]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 11
+    Warning (13410): Pin "AluResult[0]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[1]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[2]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[3]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[4]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[5]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[6]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[7]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[8]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[9]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[10]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[11]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[12]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[13]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[14]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[15]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[16]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[17]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[18]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[19]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[20]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[21]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[22]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[23]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[24]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[25]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[26]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[27]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[28]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[29]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[30]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
+    Warning (13410): Pin "AluResult[31]" is stuck at GND File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/top.vhd Line: 12
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 129 registers lost all their fanouts during netlist optimizations.
+Info (17049): 81 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[28]~4" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc2.vhd Line: 37
     Info (17048): Logic cell "mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[29]~6" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc2.vhd Line: 37
@@ -906,14 +892,14 @@ Info (17016): Found the following redundant logic cells in design
     Info (17048): Logic cell "mips:mips_inst|datapath:data_path_inst|Bloc2:Bloc2_inst|s_IF_ID_PCPlus4[31]~10" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Model SIM SIMULATE/Bloc2.vhd Line: 37
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 348 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 161 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 250 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info (21061): Implemented 63 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 99 warnings
     Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Fri Jul 26 17:27:58 2024
-    Info: Elapsed time: 00:00:12
+    Info: Processing ended: Fri Jul 26 17:41:28 2024
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:16
 
 
