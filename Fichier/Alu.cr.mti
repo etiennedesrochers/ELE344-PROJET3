@@ -1,0 +1,249 @@
+C:/Users/desro/Documents/ELE344-PROJET3/Fichier/control.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/control.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity control
+-- Compiling architecture control of control
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_ex_mem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_ex_mem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule_ex_mem
+-- Compiling architecture rtl of bascule_ex_mem
+-- Loading entity bascule_1_bit
+-- Loading entity bascule
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ligne_de_mux_pc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ligne_de_mux_pc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ligne_de_mux_pc
+-- Compiling architecture rtl of ligne_de_mux_pc
+-- Loading entity mux2
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/dmem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/dmem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package MATH_REAL
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity dmem
+-- Compiling architecture dmem_arch of dmem
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_id_ex_rt_rs_rd.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_id_ex_rt_rs_rd.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule_id_ex_rt_rs_rd
+-- Compiling architecture rtl of bascule_id_ex_rt_rs_rd
+-- Loading entity bascule
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity unite
+-- Compiling architecture rtl of unite
+** Warning: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd(18): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+** Warning: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd(20): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+** Warning: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd(26): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+** Warning: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd(28): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_1_bit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_1_bit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule_1_bit
+-- Compiling architecture rtl of bascule_1_bit
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/regfile.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/regfile.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegFile
+-- Compiling architecture RegFile_arch of RegFile
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mips.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mips.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mips
+-- Compiling architecture rtl of mips
+-- Loading entity control
+-- Loading entity datapath
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Bloc_2
+-- Compiling architecture rtl of Bloc_2
+-- Loading entity bascule_ifid
+-- Loading entity RegFile
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ual.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ual.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UAL
+-- Compiling architecture rtl of UAL
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_ifid.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_ifid.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule_ifid
+-- Compiling architecture rtl of bascule_ifid
+-- Loading entity bascule
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Bloc_3
+-- Compiling architecture rtl of Bloc_3
+-- Loading entity bascule_id_ex_rt_rs_rd
+-- Loading entity bascule_rd1_rd2
+-- Loading entity bascule_idex_wb_m_ex
+-- Loading entity mux3
+-- Loading entity mux2
+-- Loading entity UAL
+-- Loading entity unite
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PC
+-- Compiling architecture rtl of PC
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pcplus4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pcplus4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity PC_Plus4
+-- Compiling architecture rtl of PC_Plus4
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity top
+-- Compiling architecture rtl of top
+-- Loading entity imem
+-- Loading entity mips
+-- Loading package MATH_REAL
+-- Loading entity dmem
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc4.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc4.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Bloc_4
+-- Compiling architecture rtl of Bloc_4
+-- Loading entity bascule_ex_mem
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_rd1_rd2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_rd1_rd2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule_rd1_rd2
+-- Compiling architecture rtl of bascule_rd1_rd2
+-- Loading entity bascule
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux2
+-- Compiling architecture rtl of mux2
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc5.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/Bloc5.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Bloc_5
+-- Compiling architecture rtl of Bloc_5
+-- Loading entity bascule_1_bit
+-- Loading entity bascule
+-- Loading entity mux2
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux3.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux3.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux3
+-- Compiling architecture rtl of mux3
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule
+-- Compiling architecture rtl of bascule
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_idex_wb_m_ex.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/bascule_idex_wb_m_ex.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bascule_idex_wb_m_ex
+-- Compiling architecture rtl of bascule_idex_wb_m_ex
+-- Loading entity bascule_1_bit
+-- Loading entity bascule
+
+} {} {}} C:/Users/desro/Documents/ELE344-PROJET3/Fichier/imem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/desro/Documents/ELE344-PROJET3/Fichier/imem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity imem
+-- Compiling architecture imem_arch of imem
+
+} {} {}}

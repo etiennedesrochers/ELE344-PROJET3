@@ -1,0 +1,1605 @@
+do mips.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:01:25 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_1_bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_1_bit
+# -- Compiling architecture rtl of bascule_1_bit
+# End time: 15:01:25 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:01:25 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule
+# -- Compiling architecture rtl of bascule
+# End time: 15:01:25 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:01:25 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ifid.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ifid
+# -- Compiling architecture rtl of bascule_ifid
+# -- Loading entity bascule
+# End time: 15:01:25 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:01:25 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_rd1_rd2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_rd1_rd2
+# -- Compiling architecture rtl of bascule_rd1_rd2
+# -- Loading entity bascule
+# End time: 15:01:25 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:01:25 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ex_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ex_mem
+# -- Compiling architecture rtl of bascule_ex_mem
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:01:25 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:01:25 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_idex_wb_m_ex 
+# ** Error: (vcom-7) Failed to open design unit file "bascule_idex_wb_m_ex" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:01:25 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./mips.do line 7
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work bascule_idex_wb_m_ex"
+do mips.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:00 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_1_bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_1_bit
+# -- Compiling architecture rtl of bascule_1_bit
+# End time: 15:02:00 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:00 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule
+# -- Compiling architecture rtl of bascule
+# End time: 15:02:00 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:00 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ifid.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ifid
+# -- Compiling architecture rtl of bascule_ifid
+# -- Loading entity bascule
+# End time: 15:02:00 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:00 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_rd1_rd2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_rd1_rd2
+# -- Compiling architecture rtl of bascule_rd1_rd2
+# -- Loading entity bascule
+# End time: 15:02:00 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:00 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ex_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ex_mem
+# -- Compiling architecture rtl of bascule_ex_mem
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:02:00 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_idex_wb_m_ex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_idex_wb_m_ex
+# -- Compiling architecture rtl of bascule_idex_wb_m_ex
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_id_ex_rt_rs_rd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_id_ex_rt_rs_rd
+# -- Compiling architecture rtl of bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work unite.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity unite
+# -- Compiling architecture rtl of unite
+# ** Warning: unite.vhd(18): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(20): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(26): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(28): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2
+# -- Compiling architecture rtl of mux2
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ligne_de_mux_pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ligne_de_mux_pc
+# -- Compiling architecture rtl of ligne_de_mux_pc
+# -- Loading entity mux2
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux3
+# -- Compiling architecture rtl of mux3
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pcplus4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_Plus4
+# -- Compiling architecture rtl of PC_Plus4
+# End time: 15:02:01 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:01 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RegFile
+# -- Compiling architecture RegFile_arch of RegFile
+# End time: 15:02:02 on Jul 28,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:02 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ual.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity UAL
+# -- Compiling architecture rtl of UAL
+# End time: 15:02:02 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:02 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_1
+# -- Compiling architecture rtl of Bloc_1
+# -- Loading entity ligne_de_mux_pc
+# -- Loading entity PC
+# -- Loading entity PC_Plus4
+# End time: 15:02:02 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:03 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_2
+# -- Compiling architecture rtl of Bloc_2
+# -- Loading entity bascule_ifid
+# -- Loading entity RegFile
+# End time: 15:02:03 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:03 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_3
+# -- Compiling architecture rtl of Bloc_3
+# -- Loading entity bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule_rd1_rd2
+# -- Loading entity bascule_idex_wb_m_ex
+# -- Loading entity mux3
+# -- Loading entity mux2
+# -- Loading entity UAL
+# -- Loading entity unite
+# End time: 15:02:03 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_4
+# -- Compiling architecture rtl of Bloc_4
+# -- Loading entity bascule_ex_mem
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_5
+# -- Compiling architecture rtl of Bloc_5
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# -- Loading entity mux2
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity datapath
+# -- Compiling architecture rtl of datapath
+# -- Loading entity Bloc_1
+# -- Loading entity Bloc_2
+# -- Loading entity Bloc_3
+# -- Loading entity Bloc_4
+# -- Loading entity Bloc_5
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control
+# -- Compiling architecture control of control
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mips.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mips
+# -- Compiling architecture rtl of mips
+# -- Loading entity control
+# -- Loading entity datapath
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work imem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity imem
+# -- Compiling architecture imem_arch of imem
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work dmem.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dmem
+# -- Compiling architecture dmem_arch of dmem
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:04 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top
+# -- Compiling architecture rtl of top
+# -- Loading entity imem
+# -- Loading entity mips
+# -- Loading package MATH_REAL
+# -- Loading entity dmem
+# End time: 15:02:04 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim Top 
+# Start time: 14:53:36 on Jul 28,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.top(rtl)
+# Loading work.imem(imem_arch)
+# Loading work.mips(rtl)
+# Loading work.control(control)
+# Loading work.datapath(rtl)
+# Loading work.bloc_1(rtl)
+# Loading work.ligne_de_mux_pc(rtl)
+# Loading work.mux2(rtl)
+# Loading work.pc(rtl)
+# Loading work.pc_plus4(rtl)
+# Loading work.bloc_2(rtl)
+# Loading work.bascule_ifid(rtl)
+# Loading work.bascule(rtl)
+# Loading work.regfile(regfile_arch)
+# Loading work.bloc_3(rtl)
+# Loading work.bascule_id_ex_rt_rs_rd(rtl)
+# Loading work.bascule_rd1_rd2(rtl)
+# Loading work.bascule_idex_wb_m_ex(rtl)
+# Loading work.bascule_1_bit(rtl)
+# Loading work.mux3(rtl)
+# Loading work.ual(rtl)
+# ** Fatal: (vsim-3348) Port length (32) does not match actual length (5) for port "/top/mips_inst/data_path_inst/Bloc_3_inst/mux2_inst2/Input_0".
+#    Time: 0 ps  Iteration: 0  Instance: /top/mips_inst/data_path_inst/Bloc_3_inst/mux2_inst2 File: mux2.vhd Line: 19
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./mips.do PAUSED at line 29
+# Compile of bascule.vhd was successful.
+# Compile of bascule_1_bit.vhd was successful.
+# Compile of bascule_ex_mem.vhd was successful.
+# Compile of bascule_id_ex_rt_rs_rd.vhd was successful.
+# Compile of bascule_idex_wb_m_ex.vhd was successful.
+# Compile of bascule_ifid.vhd was successful.
+# Compile of bascule_rd1_rd2.vhd was successful.
+# Compile of Bloc1.vhd was successful.
+# Compile of Bloc2.vhd was successful.
+# Compile of Bloc3.vhd was successful.
+# Compile of Bloc4.vhd was successful.
+# Compile of Bloc5.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of datapath.vhd was successful.
+# Compile of dmem.vhd was successful.
+# Compile of imem.vhd was successful.
+# Compile of ligne_de_mux_pc.vhd was successful.
+# Compile of mips.vhd was successful.
+# Compile of mux2.vhd was successful.
+# Compile of mux3.vhd was successful.
+# Compile of pc.vhd was successful.
+# Compile of pcplus4.vhd was successful.
+# Compile of regfile.vhd was successful.
+# Compile of top.vhd was successful.
+# Compile of ual.vhd was successful.
+# Compile of unite.vhd was successful with warnings.
+# 26 compiles, 0 failed with no errors.
+do mips.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_1_bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_1_bit
+# -- Compiling architecture rtl of bascule_1_bit
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule
+# -- Compiling architecture rtl of bascule
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ifid.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ifid
+# -- Compiling architecture rtl of bascule_ifid
+# -- Loading entity bascule
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_rd1_rd2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_rd1_rd2
+# -- Compiling architecture rtl of bascule_rd1_rd2
+# -- Loading entity bascule
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ex_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ex_mem
+# -- Compiling architecture rtl of bascule_ex_mem
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_idex_wb_m_ex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_idex_wb_m_ex
+# -- Compiling architecture rtl of bascule_idex_wb_m_ex
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_id_ex_rt_rs_rd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_id_ex_rt_rs_rd
+# -- Compiling architecture rtl of bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work unite.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity unite
+# -- Compiling architecture rtl of unite
+# ** Warning: unite.vhd(18): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(20): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(26): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(28): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# End time: 15:02:55 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:55 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2
+# -- Compiling architecture rtl of mux2
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ligne_de_mux_pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ligne_de_mux_pc
+# -- Compiling architecture rtl of ligne_de_mux_pc
+# -- Loading entity mux2
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux3
+# -- Compiling architecture rtl of mux3
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pcplus4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_Plus4
+# -- Compiling architecture rtl of PC_Plus4
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RegFile
+# -- Compiling architecture RegFile_arch of RegFile
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ual.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity UAL
+# -- Compiling architecture rtl of UAL
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_1
+# -- Compiling architecture rtl of Bloc_1
+# -- Loading entity ligne_de_mux_pc
+# -- Loading entity PC
+# -- Loading entity PC_Plus4
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_2
+# -- Compiling architecture rtl of Bloc_2
+# -- Loading entity bascule_ifid
+# -- Loading entity RegFile
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:56 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_3
+# -- Compiling architecture rtl of Bloc_3
+# -- Loading entity bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule_rd1_rd2
+# -- Loading entity bascule_idex_wb_m_ex
+# -- Loading entity mux3
+# -- Loading entity mux2
+# -- Loading entity UAL
+# -- Loading entity unite
+# End time: 15:02:56 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_4
+# -- Compiling architecture rtl of Bloc_4
+# -- Loading entity bascule_ex_mem
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_5
+# -- Compiling architecture rtl of Bloc_5
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# -- Loading entity mux2
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity datapath
+# -- Compiling architecture rtl of datapath
+# -- Loading entity Bloc_1
+# -- Loading entity Bloc_2
+# -- Loading entity Bloc_3
+# -- Loading entity Bloc_4
+# -- Loading entity Bloc_5
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control
+# -- Compiling architecture control of control
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mips.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mips
+# -- Compiling architecture rtl of mips
+# -- Loading entity control
+# -- Loading entity datapath
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work imem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity imem
+# -- Compiling architecture imem_arch of imem
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work dmem.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dmem
+# -- Compiling architecture dmem_arch of dmem
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:02:57 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top
+# -- Compiling architecture rtl of top
+# -- Loading entity imem
+# -- Loading entity mips
+# -- Loading package MATH_REAL
+# -- Loading entity dmem
+# End time: 15:02:57 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim Top 
+# Start time: 14:53:36 on Jul 28,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.top(rtl)
+# Loading work.imem(imem_arch)
+# Loading work.mips(rtl)
+# Loading work.control(control)
+# Loading work.datapath(rtl)
+# Loading work.bloc_1(rtl)
+# Loading work.ligne_de_mux_pc(rtl)
+# Loading work.mux2(rtl)
+# Loading work.pc(rtl)
+# Loading work.pc_plus4(rtl)
+# Loading work.bloc_2(rtl)
+# Loading work.bascule_ifid(rtl)
+# Loading work.bascule(rtl)
+# Loading work.regfile(regfile_arch)
+# Loading work.bloc_3(rtl)
+# Loading work.bascule_id_ex_rt_rs_rd(rtl)
+# Loading work.bascule_rd1_rd2(rtl)
+# Loading work.bascule_idex_wb_m_ex(rtl)
+# Loading work.bascule_1_bit(rtl)
+# Loading work.mux3(rtl)
+# Loading work.ual(rtl)
+# Loading work.unite(rtl)
+# Loading work.bloc_4(rtl)
+# Loading work.bascule_ex_mem(rtl)
+# Loading work.bloc_5(rtl)
+# Loading work.dmem(dmem_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /top/mips_inst/data_path_inst/Bloc_1_inst/IF_ID_PCPlus4(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/dmem_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/mips_inst/data_path_inst/Bloc_2_inst/RegFile_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/mips_inst/data_path_inst/Bloc_2_inst/RegFile_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/imem_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /top/imem_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 3  Instance: /top/dmem_inst
+# ** Fatal: (vsim-3734) Index value 31 is out of range 0 to 30.
+#    Time: 600 ns  Iteration: 5  Process: /top/imem_inst/line__60 File: imem.vhd
+# Fatal error in Process line__60 at imem.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at imem.vhd 62 Process line__60
+# 
+do mips.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:47 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_1_bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_1_bit
+# -- Compiling architecture rtl of bascule_1_bit
+# End time: 15:04:47 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:47 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule
+# -- Compiling architecture rtl of bascule
+# End time: 15:04:47 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:47 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ifid.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ifid
+# -- Compiling architecture rtl of bascule_ifid
+# -- Loading entity bascule
+# End time: 15:04:47 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:47 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_rd1_rd2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_rd1_rd2
+# -- Compiling architecture rtl of bascule_rd1_rd2
+# -- Loading entity bascule
+# End time: 15:04:47 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:47 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ex_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ex_mem
+# -- Compiling architecture rtl of bascule_ex_mem
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_idex_wb_m_ex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_idex_wb_m_ex
+# -- Compiling architecture rtl of bascule_idex_wb_m_ex
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_id_ex_rt_rs_rd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_id_ex_rt_rs_rd
+# -- Compiling architecture rtl of bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work unite.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity unite
+# -- Compiling architecture rtl of unite
+# ** Warning: unite.vhd(18): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(20): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(26): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(28): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2
+# -- Compiling architecture rtl of mux2
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ligne_de_mux_pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ligne_de_mux_pc
+# -- Compiling architecture rtl of ligne_de_mux_pc
+# -- Loading entity mux2
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux3
+# -- Compiling architecture rtl of mux3
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pcplus4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_Plus4
+# -- Compiling architecture rtl of PC_Plus4
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:48 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RegFile
+# -- Compiling architecture RegFile_arch of RegFile
+# End time: 15:04:48 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ual.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity UAL
+# -- Compiling architecture rtl of UAL
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_1
+# -- Compiling architecture rtl of Bloc_1
+# -- Loading entity ligne_de_mux_pc
+# -- Loading entity PC
+# -- Loading entity PC_Plus4
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_2
+# -- Compiling architecture rtl of Bloc_2
+# -- Loading entity bascule_ifid
+# -- Loading entity RegFile
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_3
+# -- Compiling architecture rtl of Bloc_3
+# -- Loading entity bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule_rd1_rd2
+# -- Loading entity bascule_idex_wb_m_ex
+# -- Loading entity mux3
+# -- Loading entity mux2
+# -- Loading entity UAL
+# -- Loading entity unite
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_4
+# -- Compiling architecture rtl of Bloc_4
+# -- Loading entity bascule_ex_mem
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_5
+# -- Compiling architecture rtl of Bloc_5
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# -- Loading entity mux2
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity datapath
+# -- Compiling architecture rtl of datapath
+# -- Loading entity Bloc_1
+# -- Loading entity Bloc_2
+# -- Loading entity Bloc_3
+# -- Loading entity Bloc_4
+# -- Loading entity Bloc_5
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control
+# -- Compiling architecture control of control
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:49 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mips.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mips
+# -- Compiling architecture rtl of mips
+# -- Loading entity control
+# -- Loading entity datapath
+# End time: 15:04:49 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:50 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work imem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity imem
+# -- Compiling architecture imem_arch of imem
+# End time: 15:04:50 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:50 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work dmem.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dmem
+# -- Compiling architecture dmem_arch of dmem
+# End time: 15:04:50 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:50 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top
+# -- Compiling architecture rtl of top
+# -- Loading entity imem
+# -- Loading entity mips
+# -- Loading package MATH_REAL
+# -- Loading entity dmem
+# End time: 15:04:50 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:04:51 on Jul 28,2024, Elapsed time: 0:11:15
+# Errors: 13, Warnings: 29
+# vsim Top 
+# Start time: 15:04:51 on Jul 28,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.top(rtl)
+# Loading work.imem(imem_arch)
+# Loading work.mips(rtl)
+# Loading work.control(control)
+# Loading work.datapath(rtl)
+# Loading work.bloc_1(rtl)
+# Loading work.ligne_de_mux_pc(rtl)
+# Loading work.mux2(rtl)
+# Loading work.pc(rtl)
+# Loading work.pc_plus4(rtl)
+# Loading work.bloc_2(rtl)
+# Loading work.bascule_ifid(rtl)
+# Loading work.bascule(rtl)
+# Loading work.regfile(regfile_arch)
+# Loading work.bloc_3(rtl)
+# Loading work.bascule_id_ex_rt_rs_rd(rtl)
+# Loading work.bascule_rd1_rd2(rtl)
+# Loading work.bascule_idex_wb_m_ex(rtl)
+# Loading work.bascule_1_bit(rtl)
+# Loading work.mux3(rtl)
+# Loading work.ual(rtl)
+# Loading work.unite(rtl)
+# Loading work.bloc_4(rtl)
+# Loading work.bascule_ex_mem(rtl)
+# Loading work.bloc_5(rtl)
+# Loading work.dmem(dmem_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /top/mips_inst/data_path_inst/Bloc_1_inst/IF_ID_PCPlus4(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# Value length (3) does not equal array index length (32).
+# ** UI-Msg: (vsim-4011) Invalid force value: 0x0 0xF.
+# Error in macro ./mips.do line 37
+# Value length (3) does not equal array index length (32).
+# ** UI-Msg: (vsim-4011) Invalid force value: 0x0 0xF.
+# 
+#     while executing
+# "force -deposit sim:/top/AluResult 0x0 0xF"
+do mips.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_1_bit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_1_bit
+# -- Compiling architecture rtl of bascule_1_bit
+# End time: 15:05:39 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule
+# -- Compiling architecture rtl of bascule
+# End time: 15:05:39 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ifid.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ifid
+# -- Compiling architecture rtl of bascule_ifid
+# -- Loading entity bascule
+# End time: 15:05:39 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_rd1_rd2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_rd1_rd2
+# -- Compiling architecture rtl of bascule_rd1_rd2
+# -- Loading entity bascule
+# End time: 15:05:39 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_ex_mem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_ex_mem
+# -- Compiling architecture rtl of bascule_ex_mem
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:05:39 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_idex_wb_m_ex.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_idex_wb_m_ex
+# -- Compiling architecture rtl of bascule_idex_wb_m_ex
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# End time: 15:05:39 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work bascule_id_ex_rt_rs_rd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bascule_id_ex_rt_rs_rd
+# -- Compiling architecture rtl of bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule
+# End time: 15:05:39 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:39 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work unite.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity unite
+# -- Compiling architecture rtl of unite
+# ** Warning: unite.vhd(18): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(20): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(26): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# ** Warning: unite.vhd(28): (vcom-1083) Implicit array operator "/=" always returns TRUE (left length 5 is not equal to right length 4).
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 4
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2
+# -- Compiling architecture rtl of mux2
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ligne_de_mux_pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ligne_de_mux_pc
+# -- Compiling architecture rtl of ligne_de_mux_pc
+# -- Loading entity mux2
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mux3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux3
+# -- Compiling architecture rtl of mux3
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work pcplus4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC_Plus4
+# -- Compiling architecture rtl of PC_Plus4
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work regfile.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RegFile
+# -- Compiling architecture RegFile_arch of RegFile
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work ual.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity UAL
+# -- Compiling architecture rtl of UAL
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_1
+# -- Compiling architecture rtl of Bloc_1
+# -- Loading entity ligne_de_mux_pc
+# -- Loading entity PC
+# -- Loading entity PC_Plus4
+# End time: 15:05:40 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:40 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_2
+# -- Compiling architecture rtl of Bloc_2
+# -- Loading entity bascule_ifid
+# -- Loading entity RegFile
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_3
+# -- Compiling architecture rtl of Bloc_3
+# -- Loading entity bascule_id_ex_rt_rs_rd
+# -- Loading entity bascule_rd1_rd2
+# -- Loading entity bascule_idex_wb_m_ex
+# -- Loading entity mux3
+# -- Loading entity mux2
+# -- Loading entity UAL
+# -- Loading entity unite
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_4
+# -- Compiling architecture rtl of Bloc_4
+# -- Loading entity bascule_ex_mem
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work Bloc5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Bloc_5
+# -- Compiling architecture rtl of Bloc_5
+# -- Loading entity bascule_1_bit
+# -- Loading entity bascule
+# -- Loading entity mux2
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity datapath
+# -- Compiling architecture rtl of datapath
+# -- Loading entity Bloc_1
+# -- Loading entity Bloc_2
+# -- Loading entity Bloc_3
+# -- Loading entity Bloc_4
+# -- Loading entity Bloc_5
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work control.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity control
+# -- Compiling architecture control of control
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work mips.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mips
+# -- Compiling architecture rtl of mips
+# -- Loading entity control
+# -- Loading entity datapath
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work imem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity imem
+# -- Compiling architecture imem_arch of imem
+# End time: 15:05:41 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:41 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work dmem.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dmem
+# -- Compiling architecture dmem_arch of dmem
+# End time: 15:05:42 on Jul 28,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:05:42 on Jul 28,2024
+# vcom -reportprogress 300 -93 -work work top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity top
+# -- Compiling architecture rtl of top
+# -- Loading entity imem
+# -- Loading entity mips
+# -- Loading package MATH_REAL
+# -- Loading entity dmem
+# End time: 15:05:42 on Jul 28,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:05:43 on Jul 28,2024, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 2
+# vsim Top 
+# Start time: 15:05:43 on Jul 28,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.top(rtl)
+# Loading work.imem(imem_arch)
+# Loading work.mips(rtl)
+# Loading work.control(control)
+# Loading work.datapath(rtl)
+# Loading work.bloc_1(rtl)
+# Loading work.ligne_de_mux_pc(rtl)
+# Loading work.mux2(rtl)
+# Loading work.pc(rtl)
+# Loading work.pc_plus4(rtl)
+# Loading work.bloc_2(rtl)
+# Loading work.bascule_ifid(rtl)
+# Loading work.bascule(rtl)
+# Loading work.regfile(regfile_arch)
+# Loading work.bloc_3(rtl)
+# Loading work.bascule_id_ex_rt_rs_rd(rtl)
+# Loading work.bascule_rd1_rd2(rtl)
+# Loading work.bascule_idex_wb_m_ex(rtl)
+# Loading work.bascule_1_bit(rtl)
+# Loading work.mux3(rtl)
+# Loading work.ual(rtl)
+# Loading work.unite(rtl)
+# Loading work.bloc_4(rtl)
+# Loading work.bascule_ex_mem(rtl)
+# Loading work.bloc_5(rtl)
+# Loading work.dmem(dmem_arch)
+# ** Warning: (vsim-8683) Uninitialized out port /top/mips_inst/data_path_inst/Bloc_1_inst/IF_ID_PCPlus4(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/dmem_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/mips_inst/data_path_inst/Bloc_2_inst/RegFile_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/mips_inst/data_path_inst/Bloc_2_inst/RegFile_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /top/imem_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 3  Instance: /top/imem_inst
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 40 ns  Iteration: 3  Instance: /top/dmem_inst
+# ** Fatal: (vsim-3734) Index value 31 is out of range 0 to 30.
+#    Time: 600 ns  Iteration: 5  Process: /top/imem_inst/line__60 File: imem.vhd
+# Fatal error in Process line__60 at imem.vhd line 62
+# 
+# HDL call sequence:
+# Stopped at imem.vhd 62 Process line__60
+# 
+quit -sim
+# End time: 15:11:20 on Jul 28,2024, Elapsed time: 0:05:37
+# Errors: 1, Warnings: 8
