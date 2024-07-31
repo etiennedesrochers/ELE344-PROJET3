@@ -23,13 +23,11 @@ END;
 
 architecture rtl of mux3 is
 
-signal intermediaire : std_logic_vector(N-1 downto 0);
+
 
 begin
-    --Sort sur la sortie "out1" selon le selectionneur "sel"
-    with sel select
-    out1<=  Input_0 when "00",
-        Input_1 when "01",
-         Input_2 when others;    
+    out1 <= Input_0 when sel = "00" else
+        Input_1 when sel = "01" else
+        Input_2;
 end architecture;
 

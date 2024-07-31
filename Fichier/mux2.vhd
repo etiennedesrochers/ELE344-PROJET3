@@ -23,20 +23,7 @@ END; -- Controller;
 
 architecture rtl of mux2 is
 
-signal intermediaire : std_logic_vector(N-1 downto 0);
-
 begin
-  
-    --Sort sur la sortie "out1" selon le selectionneur "sel"
-    process (Input_0,Input_1,sel)
-    begin
-        case sel is
-            when '1' =>
-                out1 <= Input_1;
-            when others =>
-                out1 <= Input_0;     
-        end case;
-    end process;
-     
+out1 <= Input_0 when sel = '0' else Input_1;
 end architecture;
 

@@ -1,0 +1,2 @@
+# Ignore .flock files
+*.flock
