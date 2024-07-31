@@ -24,6 +24,6 @@ END; -- Controller;
 architecture rtl of mux2 is
 
 begin
-out1 <= Input_0 when sel = '0' else Input_1;
+out1 <= Input_1 when sel = '1' else Input_1;
 end architecture;
 

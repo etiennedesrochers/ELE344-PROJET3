@@ -90,6 +90,9 @@ architecture rtl of datapath is
     signal EX_SrcA : std_logic_vector(31 downto 0);
     signal EX_ForwardB : std_logic_vector(1 downto 0);
     signal EX_SrcB : std_logic_vector(31 downto 0);
+    signal ID_MemReadIn : std_logic;
+    signal ID_MemWriteIn : std_logic;
+    signal ID_AluSrc : std_logic;
 begin
   --###############################################BLOC1################################################
     
@@ -102,7 +105,7 @@ begin
        PC_IN => IF_PCNext,
        PC_OUT => If_PC);
    --On connecte le pc courrent sur la sortie pc pour l'envoyer sur le imem
-   PC <= If_PC;
+ 
 
    --Additionneur pc plus 4
    PC_Plus4_inst: entity work.PC_Plus4
@@ -119,11 +122,28 @@ begin
     if RESET = '1' then
         IF_ID_PCPlus4 <= (others => '0');
         IF_ID_Instruction <= (others => '0');
-       
+        PC <= (others=>'0');
+        ID_MemToReg <=   '0';
+        ID_MemWriteIn <= '0';
+        ID_MemReadIn <=  '0';
+        ID_Branch <=     '0';
+        ID_AluSrc <=     '0';
+        ID_RegDst <=     '0';
+        ID_RegWrite <=   '0';
+        ID_AluControl <= (others => '0');
     --Sur un front montant
     elsif rising_edge(CLK) then 
         IF_ID_PCPlus4 <= IF_PCPlus4;
         IF_ID_Instruction<= Instruction;
+        PC <= If_PC;
+        ID_MemToReg <=      MemToReg;
+        ID_MemWriteIn <=    MemWriteIn;
+        ID_MemReadIn <=     MemReadIn;
+        ID_Branch <=        Branch;
+        ID_AluSrc <=        AluSrc;
+        ID_RegDst <=        RegDst;
+        ID_RegWrite <=      RegWrite;
+        ID_AluControl <=    AluControl;
     end if;             
 end process;
 --####################################################################################################
@@ -170,14 +190,14 @@ begin
 
     --Sur un front montant
     elsif rising_edge(CLK) then 
-        ID_EX_MemtoReg      <= MemToReg;
-        ID_EX_MemWrite      <= MemWriteIn;
-        ID_EX_MemRead       <= MemReadIn;
-        ID_EX_Branch        <= Branch;
-        ID_EX_Alusrc        <=  AluSrc;
-        ID_EX_Regdst        <= RegDst;
-        ID_EX_RegWrite      <= RegWrite;
-        ID_EX_AluControl    <=  AluControl;
+        ID_EX_MemtoReg      <= ID_MemToReg;
+        ID_EX_MemWrite      <= ID_MemWriteIn;
+        ID_EX_MemRead       <= ID_MemReadIn;
+        ID_EX_Branch        <= ID_Branch;
+        ID_EX_Alusrc        <= ID_AluSrc;
+        ID_EX_Regdst        <= ID_RegDst;
+        ID_EX_RegWrite      <= ID_RegWrite;
+        ID_EX_AluControl    <= ID_AluControl;
         ID_EX_PCPlus4       <= IF_ID_PCPlus4;
         ID_EX_SignImm       <= ID_SignImm;
         ID_EX_rs            <= ID_rs;
@@ -289,6 +309,6 @@ end process;
 
 
 --#################################BLOC5###################################################################
-WB_Result <= MEM_WB_readdata when MEM_WB_MemtoReg = '0' else MEM_WB_AluResult;
+WB_Result <= MEM_WB_readdata when MEM_WB_MemtoReg = '1' else MEM_WB_AluResult;
 --####################################################################################################
 end architecture;

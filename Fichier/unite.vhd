@@ -12,24 +12,26 @@ entity unite is
 end entity;
 
 ARCHITECTURE rtl OF unite IS
+signal tt : std_logic_vector(1 downto 0);
 BEGIN
+
+
 
 process (EX_MEM_RegWrite,ID_EX_rs, ID_EX_rt, EX_MEM_WriteReg, MEM_WB_WriteReg,MEM_WB_RegWrite)
 begin
+    EX_ForwardA <= "00";
+    EX_ForwardB <= "00";
     if(EX_MEM_RegWrite ='1' and (EX_MEM_WriteReg /= "00000") and (EX_MEM_WriteReg = ID_EX_rs)) then
         EX_ForwardA <= "10";
-    elsif (MEM_WB_RegWrite = '1' and  EX_MEM_WriteReg /= "00000" and MEM_WB_WriteReg = ID_EX_rs) then
+
+    elsif (MEM_WB_RegWrite = '1' and  MEM_WB_WriteReg /= "00000" and MEM_WB_WriteReg = ID_EX_rs) then
         EX_ForwardA <= "01";
-    else 
-        EX_ForwardA <= "00";    
     end if;
 
     if(EX_MEM_RegWrite ='1' and EX_MEM_WriteReg /= "00000" and EX_MEM_WriteReg = ID_EX_rt) then
-        EX_ForwardB <= "10";
+        EX_ForwardB <= "10"; 
     elsif(MEM_WB_RegWrite ='1'  and  EX_MEM_WriteReg /= "00000" and MEM_WB_WriteReg = ID_EX_rt) then
         EX_ForwardB <= "01";
-    else 
-        EX_ForwardB <= "00";
      end if;
 end process;
 
