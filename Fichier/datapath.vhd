@@ -93,11 +93,13 @@ architecture rtl of datapath is
     signal ID_MemReadIn : std_logic;
     signal ID_MemWriteIn : std_logic;
     signal ID_AluSrc : std_logic;
+    signal ALU_INSTRUCTION : std_logic_vector(31 downto 0);
+   
 begin
   --###############################################BLOC1################################################
     
     IF_PCNextBr <= IF_PCPlus4 when EX_PCSrc = '0' else EX_PCBranch;
-    IF_PCNext <= IF_PCNextBr when Jump = '0' else ID_PCJump;
+    IF_PCNext <= IF_PCNextBr when ID_Jump = '0' else ID_PCJump;
     PC_inst: entity work.PC
     port map(
        Clk => Clk,
@@ -105,7 +107,7 @@ begin
        PC_IN => IF_PCNext,
        PC_OUT => If_PC);
    --On connecte le pc courrent sur la sortie pc pour l'envoyer sur le imem
- 
+   PC <= If_PC;
 
    --Additionneur pc plus 4
    PC_Plus4_inst: entity work.PC_Plus4
@@ -122,7 +124,7 @@ begin
     if RESET = '1' then
         IF_ID_PCPlus4 <= (others => '0');
         IF_ID_Instruction <= (others => '0');
-        PC <= (others=>'0');
+        
         ID_MemToReg <=   '0';
         ID_MemWriteIn <= '0';
         ID_MemReadIn <=  '0';
@@ -135,7 +137,7 @@ begin
     elsif rising_edge(CLK) then 
         IF_ID_PCPlus4 <= IF_PCPlus4;
         IF_ID_Instruction<= Instruction;
-        PC <= If_PC;
+        ID_Jump <= Jump;
         ID_MemToReg <=      MemToReg;
         ID_MemWriteIn <=    MemWriteIn;
         ID_MemReadIn <=     MemReadIn;
@@ -158,7 +160,7 @@ RegFile_inst: entity work.RegFile
     ra1 => IF_ID_Instruction(25 downto 21),
     ra2 => IF_ID_Instruction(20 downto 16),
     wa => MEM_WB_WriteReg,
-    wd => EX_MEM_AluResult,
+    wd => WB_Result,
     rd1 => ID_rd1,
     rd2 => ID_rd2
 );
@@ -205,6 +207,7 @@ begin
         ID_EX_rd            <= ID_rd;
         ID_EX_rd1           <= ID_rd1;
         ID_EX_rd2           <= ID_rd2;
+        ALU_INSTRUCTION <= IF_ID_Instruction;
     end if;             
 end process;
 

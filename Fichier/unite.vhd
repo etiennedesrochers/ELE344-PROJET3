@@ -30,7 +30,7 @@ begin
 
     if(EX_MEM_RegWrite ='1' and EX_MEM_WriteReg /= "00000" and EX_MEM_WriteReg = ID_EX_rt) then
         EX_ForwardB <= "10"; 
-    elsif(MEM_WB_RegWrite ='1'  and  EX_MEM_WriteReg /= "00000" and MEM_WB_WriteReg = ID_EX_rt) then
+    elsif(MEM_WB_RegWrite ='1'  and  MEM_WB_WriteReg /= "00000" and MEM_WB_WriteReg = ID_EX_rt) then
         EX_ForwardB <= "01";
      end if;
 end process;

@@ -19,7 +19,7 @@ END;  -- imem;
 
 ARCHITECTURE imem_arch OF imem IS
 
-  CONSTANT TAILLE_ROM : positive := 31;  -- taille de la rom (modifier au besoin)
+  CONSTANT TAILLE_ROM : positive := 32;  -- taille de la rom (modifier au besoin)
   TYPE romtype IS ARRAY (0 TO TAILLE_ROM) OF std_logic_vector(31 DOWNTO 0);
 
 
@@ -30,7 +30,7 @@ ARCHITECTURE imem_arch OF imem IS
     3  => x"20640004",
     4  => x"00641024",
     5  => x"00472825",
-    6  => x"10e30005",
+    6  => x"10e3000A",
     7  => x"20000000",
     8  => x"20000000",
     9  => x"0085102a",
@@ -40,22 +40,23 @@ ARCHITECTURE imem_arch OF imem IS
     13 => x"2047fffc",
     14  => x"20000000",
     15 => x"08000006",
-    16 => x"00e2202a",
-    17 => x"00e31024",
-    18 => x"8c471fdb",
-    19  => x"20000000",
-    20 => x"ac452003",
-    21 => x"10a70001",
-    22 => x"20000000",
+    16  => x"20000000",
+    17 => x"00e2202a",
+    18 => x"00e31024",
+    19 => x"8c471fdb",
+    20  => x"20000000",
+    21 => x"ac452003",
+    22 => x"10a70001",
     23 => x"20000000",
-    24 => x"00a33825",
-    25 => x"8ce42003",
-    26  => x"20000000",
-    27 => x"08000000",
-    28  => x"20000000",
+    24 => x"20000000",
+    25 => x"00a33825",
+    26 => x"8ce42003",
+    27  => x"20000000",
+    28 => x"08000000",
     29  => x"20000000",
     30  => x"20000000",
-    31  => x"20000000");
+    31  => x"20000000",
+    32  => x"20000000");
 
 BEGIN
   PROCESS (adresse)
