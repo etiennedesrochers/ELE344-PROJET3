@@ -19,6 +19,7 @@ add wave -position end  sim:/top/clk
 add wave -position end  sim:/top/reset
 add wave -position end  sim:/top/PC(9:2)
 add wave -position end  sim:/top/Instruction
+add wave -position end  sim:/top/mips_inst/data_path_inst/IF_ID_Instruction
 add wave -position end  sim:/top/AluResult
 add wave -position end  sim:/top/WRITEDATA
 
