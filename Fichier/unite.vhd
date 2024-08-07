@@ -12,7 +12,6 @@ entity unite is
 end entity;
 
 ARCHITECTURE rtl OF unite IS
-signal tt : std_logic_vector(1 downto 0);
 BEGIN
 
 
@@ -23,7 +22,6 @@ begin
     EX_ForwardB <= "00";
     if(EX_MEM_RegWrite ='1' and (EX_MEM_WriteReg /= "00000") and (EX_MEM_WriteReg = ID_EX_rs)) then
         EX_ForwardA <= "10";
-
     elsif (MEM_WB_RegWrite = '1' and  MEM_WB_WriteReg /= "00000" and MEM_WB_WriteReg = ID_EX_rs) then
         EX_ForwardA <= "01";
     end if;

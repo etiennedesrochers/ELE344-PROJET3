@@ -1,17 +1,17 @@
-Fitter Status : Successful - Mon Jul 29 13:09:44 2024
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fitter Status : Successful - Fri Aug  2 14:08:23 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Alu
 Top-level Entity Name : top
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 524 / 49,760 ( 1 % )
-    Total combinational functions : 471 / 49,760 ( < 1 % )
-    Dedicated logic registers : 367 / 49,760 ( < 1 % )
-Total registers : 367
+Total logic elements : 618 / 49,760 ( 1 % )
+    Total combinational functions : 539 / 49,760 ( 1 % )
+    Dedicated logic registers : 384 / 49,760 ( < 1 % )
+Total registers : 384
 Total pins : 98 / 360 ( 27 % )
 Total virtual pins : 0
-Total memory bits : 512 / 1,677,312 ( < 1 % )
+Total memory bits : 6,144 / 1,677,312 ( < 1 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
 UFM blocks : 0 / 1 ( 0 % )

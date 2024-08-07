@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Mon Jul 29 13:09:24 2024
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Fri Aug  2 14:08:06 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Alu
 Top-level Entity Name : top
 Family : MAX 10
-Total logic elements : 619
-    Total combinational functions : 469
-    Dedicated logic registers : 367
-Total registers : 367
+Total logic elements : 669
+    Total combinational functions : 536
+    Dedicated logic registers : 384
+Total registers : 384
 Total pins : 98
 Total virtual pins : 0
-Total memory bits : 512
+Total memory bits : 6,144
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
 UFM blocks : 0

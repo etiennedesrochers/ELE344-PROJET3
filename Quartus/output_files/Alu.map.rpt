@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Alu
-Mon Jul 29 13:09:24 2024
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fri Aug  2 14:08:06 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -17,16 +17,16 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0|altsyncram_aac1:auto_generated
- 14. Source assignments for mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1|altsyncram_aac1:auto_generated
- 15. Parameter Settings for User Entity Instance: mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst
- 16. Parameter Settings for User Entity Instance: mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst2
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0|altsyncram_aac1:auto_generated
+ 15. Source assignments for mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1|altsyncram_aac1:auto_generated
+ 16. Source assignments for dmem:dmem_inst|altsyncram:mem_rtl_0|altsyncram_eo71:auto_generated
  17. Parameter Settings for User Entity Instance: mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst
  18. Parameter Settings for Inferred Entity Instance: mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0
  19. Parameter Settings for Inferred Entity Instance: mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "mips:mips_inst|datapath:data_path_inst|unite:unite_inst"
+ 20. Parameter Settings for Inferred Entity Instance: dmem:dmem_inst|altsyncram:mem_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
  22. Port Connectivity Checks: "mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst"
  23. Post-Synthesis Netlist Statistics for Top Partition
  24. Elapsed Time Per Partition
@@ -37,7 +37,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -54,26 +54,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul 29 13:09:24 2024       ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                      ; Alu                                         ;
-; Top-level Entity Name              ; top                                         ;
-; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 619                                         ;
-;     Total combinational functions  ; 469                                         ;
-;     Dedicated logic registers      ; 367                                         ;
-; Total registers                    ; 367                                         ;
-; Total pins                         ; 98                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 512                                         ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Aug  2 14:08:06 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                      ; Alu                                            ;
+; Top-level Entity Name              ; top                                            ;
+; Family                             ; MAX 10                                         ;
+; Total logic elements               ; 669                                            ;
+;     Total combinational functions  ; 536                                            ;
+;     Dedicated logic registers      ; 384                                            ;
+; Total registers                    ; 384                                            ;
+; Total pins                         ; 98                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 6,144                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
+; UFM blocks                         ; 0                                              ;
+; ADC blocks                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -167,53 +167,48 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
-;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; ../Fichier/unite.vhd             ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd                    ;         ;
-; ../Fichier/ual.vhd               ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ual.vhd                      ;         ;
-; ../Fichier/top.vhd               ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd                      ;         ;
-; ../Fichier/regfile.vhd           ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/regfile.vhd                  ;         ;
-; ../Fichier/pcplus4.vhd           ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pcplus4.vhd                  ;         ;
-; ../Fichier/pc.vhd                ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pc.vhd                       ;         ;
-; ../Fichier/mux3.vhd              ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux3.vhd                     ;         ;
-; ../Fichier/mips.vhd              ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mips.vhd                     ;         ;
-; ../Fichier/imem.vhd              ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/imem.vhd                     ;         ;
-; ../Fichier/dmem.vhd              ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/dmem.vhd                     ;         ;
-; ../Fichier/datapath.vhd          ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd                 ;         ;
-; ../Fichier/control.vhd           ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344-PROJET3/Fichier/control.vhd                  ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_aac1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/desro/Documents/ELE344-PROJET3/Quartus/db/altsyncram_aac1.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; ../Fichier/unite.vhd             ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/unite.vhd              ;         ;
+; ../Fichier/ual.vhd               ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/ual.vhd                ;         ;
+; ../Fichier/top.vhd               ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/top.vhd                ;         ;
+; ../Fichier/regfile.vhd           ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/regfile.vhd            ;         ;
+; ../Fichier/pcplus4.vhd           ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/pcplus4.vhd            ;         ;
+; ../Fichier/pc.vhd                ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/pc.vhd                 ;         ;
+; ../Fichier/mips.vhd              ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mips.vhd               ;         ;
+; ../Fichier/imem.vhd              ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/imem.vhd               ;         ;
+; ../Fichier/dmem.vhd              ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/dmem.vhd               ;         ;
+; ../Fichier/datapath.vhd          ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd           ;         ;
+; ../Fichier/control.vhd           ; yes             ; User VHDL File               ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/control.vhd            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_aac1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Quartus/db/altsyncram_aac1.tdf ;         ;
+; db/altsyncram_eo71.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Quartus/db/altsyncram_eo71.tdf ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -221,31 +216,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 619       ;
+; Estimated Total logic elements              ; 669       ;
 ;                                             ;           ;
-; Total combinational functions               ; 469       ;
+; Total combinational functions               ; 536       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 263       ;
-;     -- 3 input functions                    ; 168       ;
+;     -- 4 input functions                    ; 390       ;
+;     -- 3 input functions                    ; 108       ;
 ;     -- <=2 input functions                  ; 38        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 379       ;
+;     -- normal mode                          ; 446       ;
 ;     -- arithmetic mode                      ; 90        ;
 ;                                             ;           ;
-; Total registers                             ; 367       ;
-;     -- Dedicated logic registers            ; 367       ;
+; Total registers                             ; 384       ;
+;     -- Dedicated logic registers            ; 384       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 98        ;
-; Total memory bits                           ; 512       ;
+; Total memory bits                           ; 6144      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 431       ;
-; Total fan-out                               ; 3421      ;
-; Average fan-out                             ; 3.12      ;
+; Maximum fan-out                             ; 480       ;
+; Total fan-out                               ; 4380      ;
+; Average fan-out                             ; 3.61      ;
 +---------------------------------------------+-----------+
 
 
@@ -254,22 +249,23 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                  ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                            ; 469 (1)             ; 367 (0)                   ; 512         ; 0          ; 0            ; 0       ; 0         ; 98   ; 0            ; 0          ; |top                                                                                                                 ; top             ; work         ;
-;    |imem:imem_inst|                             ; 47 (47)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|imem:imem_inst                                                                                                  ; imem            ; work         ;
-;    |mips:mips_inst|                             ; 421 (0)             ; 367 (0)                   ; 512         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst                                                                                                  ; mips            ; work         ;
-;       |control:control_inst|                    ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|control:control_inst                                                                             ; control         ; work         ;
-;       |datapath:data_path_inst|                 ; 411 (55)            ; 367 (270)                 ; 512         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst                                                                          ; datapath        ; work         ;
-;          |PC:PC_inst|                           ; 26 (26)             ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|PC:PC_inst                                                               ; PC              ; work         ;
+; |top                                            ; 536 (1)             ; 384 (0)                   ; 6144        ; 0          ; 0            ; 0       ; 0         ; 98   ; 0            ; 0          ; |top                                                                                                                 ; top             ; work         ;
+;    |dmem:dmem_inst|                             ; 0 (0)               ; 1 (1)                     ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dmem:dmem_inst                                                                                                  ; dmem            ; work         ;
+;       |altsyncram:mem_rtl_0|                    ; 0 (0)               ; 0 (0)                     ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dmem:dmem_inst|altsyncram:mem_rtl_0                                                                             ; altsyncram      ; work         ;
+;          |altsyncram_eo71:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 4096        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dmem:dmem_inst|altsyncram:mem_rtl_0|altsyncram_eo71:auto_generated                                              ; altsyncram_eo71 ; work         ;
+;    |imem:imem_inst|                             ; 48 (48)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|imem:imem_inst                                                                                                  ; imem            ; work         ;
+;    |mips:mips_inst|                             ; 487 (0)             ; 383 (0)                   ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst                                                                                                  ; mips            ; work         ;
+;       |control:control_inst|                    ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|control:control_inst                                                                             ; control         ; work         ;
+;       |datapath:data_path_inst|                 ; 476 (237)           ; 383 (286)                 ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst                                                                          ; datapath        ; work         ;
+;          |PC:PC_inst|                           ; 0 (0)               ; 31 (31)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|PC:PC_inst                                                               ; PC              ; work         ;
 ;          |PC_Plus4:PC_Plus4_inst|               ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|PC_Plus4:PC_Plus4_inst                                                   ; PC_Plus4        ; work         ;
-;          |RegFile:RegFile_inst|                 ; 66 (66)             ; 66 (66)                   ; 512         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst                                                     ; RegFile         ; work         ;
-;             |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 256         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
-;                |altsyncram_aac1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0|altsyncram_aac1:auto_generated ; altsyncram_aac1 ; work         ;
-;             |altsyncram:mem_rtl_1|              ; 0 (0)               ; 0 (0)                     ; 256         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1                                ; altsyncram      ; work         ;
-;                |altsyncram_aac1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256         ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1|altsyncram_aac1:auto_generated ; altsyncram_aac1 ; work         ;
-;          |UAL:UAL_inst|                         ; 132 (132)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst                                                             ; UAL             ; work         ;
-;          |mux3:mux3_inst2|                      ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst2                                                          ; mux3            ; work         ;
-;          |mux3:mux3_inst|                       ; 65 (65)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst                                                           ; mux3            ; work         ;
-;          |unite:unite_inst|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|unite:unite_inst                                                         ; unite           ; work         ;
+;          |RegFile:RegFile_inst|                 ; 68 (68)             ; 66 (66)                   ; 2048        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst                                                     ; RegFile         ; work         ;
+;             |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
+;                |altsyncram_aac1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0|altsyncram_aac1:auto_generated ; altsyncram_aac1 ; work         ;
+;             |altsyncram:mem_rtl_1|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1                                ; altsyncram      ; work         ;
+;                |altsyncram_aac1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1|altsyncram_aac1:auto_generated ; altsyncram_aac1 ; work         ;
+;          |UAL:UAL_inst|                         ; 129 (129)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst                                                             ; UAL             ; work         ;
+;          |unite:unite_inst|                     ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mips:mips_inst|datapath:data_path_inst|unite:unite_inst                                                         ; unite           ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -279,6 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
 ; Name                                                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
 +----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; dmem:dmem_inst|altsyncram:mem_rtl_0|altsyncram_eo71:auto_generated|ALTSYNCRAM                                              ; AUTO ; Single Port      ; 128          ; 32           ; --           ; --           ; 4096 ; None ;
 ; mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0|altsyncram_aac1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
 ; mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1|altsyncram_aac1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 32           ; 32           ; 32           ; 1024 ; None ;
 +----------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
@@ -290,10 +287,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                                                         ; Reason for Removal                                                        ;
 +-----------------------------------------------------------------------+---------------------------------------------------------------------------+
 ; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[19,20,24,25] ; Stuck at GND due to stuck port data_in                                    ;
+; mips:mips_inst|datapath:data_path_inst|ID_AluControl[3]               ; Stuck at GND due to stuck port data_in                                    ;
+; mips:mips_inst|datapath:data_path_inst|ID_EX_AluControl[3]            ; Stuck at GND due to stuck port data_in                                    ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_rs[3,4]                  ; Stuck at GND due to stuck port data_in                                    ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_rt[3,4]                  ; Stuck at GND due to stuck port data_in                                    ;
-; mips:mips_inst|datapath:data_path_inst|ID_EX_AluControl[3]            ; Stuck at GND due to stuck port data_in                                    ;
-; mips:mips_inst|datapath:data_path_inst|MEM_WB_readdata[0..31]         ; Stuck at GND due to stuck port data_in                                    ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[15..30]          ; Merged with mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[31]      ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_rd[4]                    ; Merged with mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[31]      ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_rd[3]                    ; Merged with mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[14]      ;
@@ -302,30 +299,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_rd[0]                    ; Merged with mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[11]      ;
 ; mips:mips_inst|datapath:data_path_inst|PC:PC_inst|PC_Value[1]         ; Merged with mips:mips_inst|datapath:data_path_inst|PC:PC_inst|PC_Value[0] ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_PCPlus4[1]               ; Merged with mips:mips_inst|datapath:data_path_inst|ID_EX_PCPlus4[0]       ;
+; mips:mips_inst|datapath:data_path_inst|MEM_WB_WriteReg[4]             ; Merged with mips:mips_inst|datapath:data_path_inst|MEM_WB_WriteReg[3]     ;
 ; mips:mips_inst|datapath:data_path_inst|EX_MEM_WriteReg[4]             ; Merged with mips:mips_inst|datapath:data_path_inst|EX_MEM_WriteReg[3]     ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[31]              ; Merged with mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[14]      ;
 ; mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[4,6..9]          ; Merged with mips:mips_inst|datapath:data_path_inst|ID_EX_SignImm[10]      ;
 ; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[4,6..9]      ; Merged with mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[10]  ;
 ; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[15]          ; Merged with mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[14]  ;
 ; mips:mips_inst|datapath:data_path_inst|IF_ID_PCPlus4[1]               ; Merged with mips:mips_inst|datapath:data_path_inst|IF_ID_PCPlus4[0]       ;
-; Total Number of Removed Registers = 78                                ;                                                                           ;
+; Total Number of Removed Registers = 48                                ;                                                                           ;
 +-----------------------------------------------------------------------+---------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                   ;
-+--------------------------------------------------------------+---------------------------+----------------------------------------------------+
-; Register name                                                ; Reason for Removal        ; Registers Removed due to This Register             ;
-+--------------------------------------------------------------+---------------------------+----------------------------------------------------+
-; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[25] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rs[4] ;
-;                                                              ; due to stuck port data_in ;                                                    ;
-; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[24] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rs[3] ;
-;                                                              ; due to stuck port data_in ;                                                    ;
-; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[20] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rt[4] ;
-;                                                              ; due to stuck port data_in ;                                                    ;
-; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[19] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rt[3] ;
-;                                                              ; due to stuck port data_in ;                                                    ;
-+--------------------------------------------------------------+---------------------------+----------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                           ;
++--------------------------------------------------------------+---------------------------+------------------------------------------------------------+
+; Register name                                                ; Reason for Removal        ; Registers Removed due to This Register                     ;
++--------------------------------------------------------------+---------------------------+------------------------------------------------------------+
+; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[25] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rs[4]         ;
+;                                                              ; due to stuck port data_in ;                                                            ;
+; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[24] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rs[3]         ;
+;                                                              ; due to stuck port data_in ;                                                            ;
+; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[20] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rt[4]         ;
+;                                                              ; due to stuck port data_in ;                                                            ;
+; mips:mips_inst|datapath:data_path_inst|IF_ID_Instruction[19] ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_rt[3]         ;
+;                                                              ; due to stuck port data_in ;                                                            ;
+; mips:mips_inst|datapath:data_path_inst|ID_AluControl[3]      ; Stuck at GND              ; mips:mips_inst|datapath:data_path_inst|ID_EX_AluControl[3] ;
+;                                                              ; due to stuck port data_in ;                                                            ;
++--------------------------------------------------------------+---------------------------+------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -333,14 +333,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 367   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 384   ;
+; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 26    ;
-; Number of registers using Asynchronous Clear ; 303   ;
+; Number of registers using Asynchronous Clear ; 319   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                    ;
++---------------------------------------------------------------+--------------------------+------+
+; Register Name                                                 ; Megafunction             ; Type ;
++---------------------------------------------------------------+--------------------------+------+
+; mips:mips_inst|datapath:data_path_inst|MEM_WB_readdata[0..31] ; dmem:dmem_inst|mem_rtl_0 ; RAM  ;
++---------------------------------------------------------------+--------------------------+------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -348,13 +357,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|ID_EX_rd1[2]             ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|ID_EX_rd2[31]            ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|PC:PC_inst|PC_Value[27]  ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|PC:PC_inst|PC_Value[8]   ;
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst|Mux4        ;
-; 3:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst|out1[1]   ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst|srcBMux[16] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|ID_EX_rd1[5]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|ID_EX_rd2[1]             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|PC:PC_inst|PC_Value[22]  ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |top|mips:mips_inst|datapath:data_path_inst|PC:PC_inst|PC_Value[7]   ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst|Mux0        ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|EX_preSrcB[31]           ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst|srcBMux[30] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |top|mips:mips_inst|datapath:data_path_inst|EX_SrcA[3]               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------+
 
 
@@ -376,24 +386,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; n              ; 32    ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst2 ;
-+----------------+-------+----------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                       ;
-+----------------+-------+----------------------------------------------------------------------------+
-; n              ; 32    ; Signed Integer                                                             ;
-+----------------+-------+----------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------------------+
+; Source assignments for dmem:dmem_inst|altsyncram:mem_rtl_0|altsyncram_eo71:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------+
+; Assignment                      ; Value              ; From ; To                          ;
++---------------------------------+--------------------+------+-----------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                           ;
++---------------------------------+--------------------+------+-----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -528,12 +527,73 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: dmem:dmem_inst|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+--------------------------+
+; Parameter Name                     ; Value                ; Type                     ;
++------------------------------------+----------------------+--------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                  ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                  ;
+; WIDTH_A                            ; 32                   ; Untyped                  ;
+; WIDTHAD_A                          ; 7                    ; Untyped                  ;
+; NUMWORDS_A                         ; 128                  ; Untyped                  ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                  ;
+; WIDTH_B                            ; 1                    ; Untyped                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                  ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; OLD_DATA             ; Untyped                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                  ;
+; INIT_FILE                          ; UNUSED               ; Untyped                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                  ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                  ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                  ;
+; DEVICE_FAMILY                      ; MAX 10               ; Untyped                  ;
+; CBXI_PARAMETER                     ; altsyncram_eo71      ; Untyped                  ;
++------------------------------------+----------------------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                                             ;
 +-------------------------------------------+----------------------------------------------------------------------------------+
 ; Name                                      ; Value                                                                            ;
 +-------------------------------------------+----------------------------------------------------------------------------------+
-; Number of entity instances                ; 2                                                                                ;
+; Number of entity instances                ; 3                                                                                ;
 ; Entity Instance                           ; mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                                        ;
 ;     -- WIDTH_A                            ; 32                                                                               ;
@@ -556,16 +616,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                     ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                             ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                        ;
+; Entity Instance                           ; dmem:dmem_inst|altsyncram:mem_rtl_0                                              ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                      ;
+;     -- WIDTH_A                            ; 32                                                                               ;
+;     -- NUMWORDS_A                         ; 128                                                                              ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                     ;
+;     -- WIDTH_B                            ; 1                                                                                ;
+;     -- NUMWORDS_B                         ; 1                                                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                        ;
 +-------------------------------------------+----------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mips:mips_inst|datapath:data_path_inst|unite:unite_inst"                                   ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; ex_forwardb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
@@ -583,24 +645,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 98                          ;
-; cycloneiii_ff         ; 367                         ;
-;     CLR               ; 277                         ;
+; cycloneiii_ff         ; 384                         ;
+;     CLR               ; 288                         ;
+;     CLR SCLR          ; 5                           ;
 ;     CLR SLD           ; 26                          ;
-;     ENA               ; 64                          ;
-; cycloneiii_lcell_comb ; 469                         ;
+;     ENA               ; 65                          ;
+; cycloneiii_lcell_comb ; 536                         ;
 ;     arith             ; 90                          ;
 ;         2 data inputs ; 30                          ;
 ;         3 data inputs ; 60                          ;
-;     normal            ; 379                         ;
+;     normal            ; 446                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 5                           ;
-;         3 data inputs ; 108                         ;
-;         4 data inputs ; 263                         ;
-; cycloneiii_ram_block  ; 64                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 390                         ;
+; cycloneiii_ram_block  ; 96                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.90                       ;
-; Average LUT depth     ; 6.54                        ;
+; Max LUT depth         ; 14.90                       ;
+; Average LUT depth     ; 7.36                        ;
 +-----------------------+-----------------------------+
 
 
@@ -618,75 +681,70 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Jul 29 13:09:17 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Fri Aug  2 14:07:53 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alu -c Alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 0 design units, including 0 entities, in source file /users/desro/documents/ele344-projet3/fichier/bascule.vhd
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/unite.vhd
-    Info (12022): Found design unit 1: unite-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd Line: 14
-    Info (12023): Found entity 1: unite File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/unite.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/ual.vhd
-    Info (12022): Found design unit 1: UAL-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ual.vhd Line: 22
-    Info (12023): Found entity 1: UAL File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ual.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/top.vhd
-    Info (12022): Found design unit 1: top-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd Line: 16
-    Info (12023): Found entity 1: top File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/regfile.vhd
-    Info (12022): Found design unit 1: RegFile-RegFile_arch File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/regfile.vhd Line: 25
-    Info (12023): Found entity 1: RegFile File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/regfile.vhd Line: 17
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/pcplus4.vhd
-    Info (12022): Found design unit 1: PC_Plus4-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pcplus4.vhd Line: 21
-    Info (12023): Found entity 1: PC_Plus4 File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pcplus4.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/pc.vhd
-    Info (12022): Found design unit 1: PC-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pc.vhd Line: 22
-    Info (12023): Found entity 1: PC File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/pc.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/mux3.vhd
-    Info (12022): Found design unit 1: mux3-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux3.vhd Line: 24
-    Info (12023): Found entity 1: mux3 File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux3.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/mux2.vhd
-    Info (12022): Found design unit 1: mux2-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux2.vhd Line: 24
-    Info (12023): Found entity 1: mux2 File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mux2.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/mips.vhd
-    Info (12022): Found design unit 1: mips-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mips.vhd Line: 28
-    Info (12023): Found entity 1: mips File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mips.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/imem.vhd
-    Info (12022): Found design unit 1: imem-imem_arch File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/imem.vhd Line: 20
-    Info (12023): Found entity 1: imem File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/imem.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/dmem.vhd
-    Info (12022): Found design unit 1: dmem-dmem_arch File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/dmem.vhd Line: 24
-    Info (12023): Found entity 1: dmem File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/dmem.vhd Line: 17
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/datapath.vhd
-    Info (12022): Found design unit 1: datapath-rtl File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 25
-    Info (12023): Found entity 1: datapath File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 14
-Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344-projet3/fichier/control.vhd
-    Info (12022): Found design unit 1: control-control File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/control.vhd Line: 23
-    Info (12023): Found entity 1: control File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/control.vhd Line: 15
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning (12019): Can't analyze file -- file ../Fichier/bascule.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/unite.vhd
+    Info (12022): Found design unit 1: unite-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/unite.vhd Line: 14
+    Info (12023): Found entity 1: unite File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/unite.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/ual.vhd
+    Info (12022): Found design unit 1: UAL-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/ual.vhd Line: 22
+    Info (12023): Found entity 1: UAL File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/ual.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/top.vhd
+    Info (12022): Found design unit 1: top-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/top.vhd Line: 16
+    Info (12023): Found entity 1: top File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/top.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/regfile.vhd
+    Info (12022): Found design unit 1: RegFile-RegFile_arch File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/regfile.vhd Line: 25
+    Info (12023): Found entity 1: RegFile File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/regfile.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/pcplus4.vhd
+    Info (12022): Found design unit 1: PC_Plus4-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/pcplus4.vhd Line: 21
+    Info (12023): Found entity 1: PC_Plus4 File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/pcplus4.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/pc.vhd
+    Info (12022): Found design unit 1: PC-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/pc.vhd Line: 22
+    Info (12023): Found entity 1: PC File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/pc.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/mux3.vhd
+    Info (12022): Found design unit 1: mux3-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mux3.vhd Line: 24
+    Info (12023): Found entity 1: mux3 File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mux3.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/mux2.vhd
+    Info (12022): Found design unit 1: mux2-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mux2.vhd Line: 24
+    Info (12023): Found entity 1: mux2 File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mux2.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/mips.vhd
+    Info (12022): Found design unit 1: mips-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mips.vhd Line: 28
+    Info (12023): Found entity 1: mips File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mips.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/imem.vhd
+    Info (12022): Found design unit 1: imem-imem_arch File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/imem.vhd Line: 20
+    Info (12023): Found entity 1: imem File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/imem.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/dmem.vhd
+    Info (12022): Found design unit 1: dmem-dmem_arch File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/dmem.vhd Line: 24
+    Info (12023): Found entity 1: dmem File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/dmem.vhd Line: 17
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/datapath.vhd
+    Info (12022): Found design unit 1: datapath-rtl File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 25
+    Info (12023): Found entity 1: datapath File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 14
+Info (12021): Found 2 design units, including 1 entities, in source file /users/desro/documents/ele344/projet 2/ele344-projet3/fichier/control.vhd
+    Info (12022): Found design unit 1: control-control File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/control.vhd Line: 23
+    Info (12023): Found entity 1: control File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/control.vhd Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file de10_lite_golden_top.v
-    Info (12023): Found entity 1: DE10_LITE_Golden_Top File: C:/Users/desro/Documents/ELE344-PROJET3/Quartus/DE10_LITE_Golden_Top.v Line: 29
+    Info (12023): Found entity 1: DE10_LITE_Golden_Top File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Quartus/DE10_LITE_Golden_Top.v Line: 29
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "imem" for hierarchy "imem:imem_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd Line: 27
-Info (12128): Elaborating entity "mips" for hierarchy "mips:mips_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd Line: 33
-Info (12128): Elaborating entity "control" for hierarchy "mips:mips_inst|control:control_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mips.vhd Line: 42
-Info (12128): Elaborating entity "datapath" for hierarchy "mips:mips_inst|datapath:data_path_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/mips.vhd Line: 57
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(43): object "EX_cout" assigned a value but never read File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 43
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(47): used implicit default value for signal "ID_EX_MemRead" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 47
-Warning (10541): VHDL Signal Declaration warning at datapath.vhd(59): used implicit default value for signal "MEM_WB_WriteReg" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 59
-Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(92): object "EX_ForwardB" assigned a value but never read File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 92
-Warning (10631): VHDL Process Statement warning at datapath.vhd(95): inferring latch(es) for signal or variable "EX_MEM_MemWrite", which holds its previous value in one or more paths through the process File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 95
-Info (10041): Inferred latch for "EX_MEM_MemWrite" at datapath.vhd(95) File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 95
-Info (12128): Elaborating entity "PC" for hierarchy "mips:mips_inst|datapath:data_path_inst|PC:PC_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 169
-Info (12128): Elaborating entity "PC_Plus4" for hierarchy "mips:mips_inst|datapath:data_path_inst|PC_Plus4:PC_Plus4_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 179
-Info (12128): Elaborating entity "RegFile" for hierarchy "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 192
-Info (12128): Elaborating entity "mux3" for hierarchy "mips:mips_inst|datapath:data_path_inst|mux3:mux3_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 219
-Info (12128): Elaborating entity "UAL" for hierarchy "mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 245
-Warning (10492): VHDL Process Statement warning at ual.vhd(41): signal "operation" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/ual.vhd Line: 41
-Info (12128): Elaborating entity "unite" for hierarchy "mips:mips_inst|datapath:data_path_inst|unite:unite_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/datapath.vhd Line: 259
-Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem_inst" File: C:/Users/desro/Documents/ELE344-PROJET3/Fichier/top.vhd Line: 45
+Info (12128): Elaborating entity "imem" for hierarchy "imem:imem_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/top.vhd Line: 27
+Info (12128): Elaborating entity "mips" for hierarchy "mips:mips_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/top.vhd Line: 33
+Info (12128): Elaborating entity "control" for hierarchy "mips:mips_inst|control:control_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mips.vhd Line: 42
+Info (12128): Elaborating entity "datapath" for hierarchy "mips:mips_inst|datapath:data_path_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/mips.vhd Line: 57
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(43): object "EX_cout" assigned a value but never read File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at datapath.vhd(96): object "ALU_INSTRUCTION" assigned a value but never read File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 96
+Info (12128): Elaborating entity "PC" for hierarchy "mips:mips_inst|datapath:data_path_inst|PC:PC_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 103
+Info (12128): Elaborating entity "PC_Plus4" for hierarchy "mips:mips_inst|datapath:data_path_inst|PC_Plus4:PC_Plus4_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 113
+Info (12128): Elaborating entity "RegFile" for hierarchy "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 156
+Info (12128): Elaborating entity "UAL" for hierarchy "mips:mips_inst|datapath:data_path_inst|UAL:UAL_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 233
+Warning (10492): VHDL Process Statement warning at ual.vhd(41): signal "operation" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/ual.vhd Line: 41
+Info (12128): Elaborating entity "unite" for hierarchy "mips:mips_inst|datapath:data_path_inst|unite:unite_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/datapath.vhd Line: 247
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dmem_inst" File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Fichier/top.vhd Line: 45
 Warning (276027): Inferred dual-clock RAM node "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|mem_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
-Info (19000): Inferred 2 megafunctions from design logic
+Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 32
@@ -717,6 +775,17 @@ Info (19000): Inferred 2 megafunctions from design logic
         Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "dmem:dmem_inst|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 128
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_PORT_A set to OLD_DATA
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (12130): Elaborated megafunction instantiation "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0"
 Info (12133): Instantiated megafunction "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -734,21 +803,33 @@ Info (12133): Instantiated megafunction "mips:mips_inst|datapath:data_path_inst|
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_aac1.tdf
-    Info (12023): Found entity 1: altsyncram_aac1 File: C:/Users/desro/Documents/ELE344-PROJET3/Quartus/db/altsyncram_aac1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_aac1 File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Quartus/db/altsyncram_aac1.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "dmem:dmem_inst|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "dmem:dmem_inst|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "128"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_PORT_A" = "OLD_DATA"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_eo71.tdf
+    Info (12023): Found entity 1: altsyncram_eo71 File: C:/Users/desro/Documents/ELE344/Projet 2/ELE344-PROJET3/Quartus/db/altsyncram_eo71.tdf Line: 28
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_1|altsyncram_aac1:auto_generated|ALTSYNCRAM" File: C:/Users/desro/Documents/ELE344-PROJET3/Quartus/db/altsyncram_aac1.tdf Line: 849
-Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "mips:mips_inst|datapath:data_path_inst|RegFile:RegFile_inst|altsyncram:mem_rtl_0|altsyncram_aac1:auto_generated|ALTSYNCRAM" File: C:/Users/desro/Documents/ELE344-PROJET3/Quartus/db/altsyncram_aac1.tdf Line: 849
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 885 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1003 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 723 logic cells
-    Info (21064): Implemented 64 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Mon Jul 29 13:09:24 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:08
+    Info (21061): Implemented 809 logic cells
+    Info (21064): Implemented 96 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Fri Aug  2 14:08:06 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:13
 
 

@@ -19,11 +19,7 @@ add wave -position end  sim:/top/clk
 add wave -position end  sim:/top/reset
 add wave -radix decimal -position end  sim:/top/PC(9:2)
 add wave -radix hexadecimal -position end  sim:/top/Instruction
---add wave -radix hexadecimal -position end  sim:/top/mips_inst/data_path_inst/IF_ID_Instruction
-add wave -radix hexadecimal -position end  sim:/top/mips_inst/data_path_inst/ALU_INSTRUCTION
 add wave -radix decimal -position end  sim:/top/AluResult
-add wave -radix decimal -position end  sim:/top/mips_inst/data_path_inst/EX_AluResult
-add wave -radix decimal -position end  sim:/top/WRITEDATA
 
 
 
@@ -32,11 +28,11 @@ add wave -radix decimal -position end  sim:/top/WRITEDATA
 
 
 
-
-
-force /top/clk 1,0 10 ns -repeat 20 ns
+force /top/clk 1,0 10 ns -repeat 20 nst
 force /top/reset 1,0 15 ns
 run 850 ns
+
+
 
 
 
