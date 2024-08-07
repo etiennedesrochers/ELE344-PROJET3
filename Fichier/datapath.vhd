@@ -24,8 +24,6 @@ end;
 
 architecture rtl of datapath is
     --Signaux venant du fichier excel de la prep1 
-
- 
     SIGNAL IF_PC                : std_logic_vector(31 DOWNTO 0);
     SIGNAL IF_PCPlus4           : std_logic_vector(31 DOWNTO 0);
     SIGNAL IF_ID_PCPlus4        : std_logic_vector(31 DOWNTO 0);
@@ -35,11 +33,8 @@ architecture rtl of datapath is
     SIGNAL ID_rd2               : std_logic_vector(31 DOWNTO 0);
     SIGNAL EX_PCBranch          : std_logic_vector(31 DOWNTO 0);
     SIGNAL EX_PCSrc             : std_logic;
-
     SIGNAL EX_preSrcB           : std_logic_vector(31 DOWNTO 0);
     SIGNAL EX_AluResult         : std_logic_vector(31 DOWNTO 0);
-   
- 
     SIGNAL EX_cout              : std_logic;
     signal EX_SignImmSh         : STD_LOGIC_VECTOR(31 DOWNTO 0);
     SIGNAL EX_WriteReg          : std_logic_vector(4 downto 0);
@@ -92,14 +87,15 @@ architecture rtl of datapath is
     signal EX_SrcB : std_logic_vector(31 downto 0);
     signal ID_MemReadIn : std_logic;
     signal ID_MemWriteIn : std_logic;
-    signal ID_AluSrc : std_logic;
-    signal ALU_INSTRUCTION : std_logic_vector(31 downto 0);
-   
+    signal ID_AluSrc : std_logic;   
 begin
   --###############################################BLOC1################################################
     
+    --mux 2 entré 
     IF_PCNextBr <= IF_PCPlus4 when EX_PCSrc = '0' else EX_PCBranch;
+    --mux 2 entré 
     IF_PCNext <= IF_PCNextBr when ID_Jump = '0' else ID_PCJump;
+    --Balance pour le PC
     PC_inst: entity work.PC
     port map(
        Clk => Clk,
@@ -118,6 +114,7 @@ begin
 --####################################################################################################
 
 --##################################################BASCULEIF_ID######################################
+
 process (Clk,RESET)
 begin
     --Si on a un reset
@@ -152,7 +149,9 @@ end process;
 
 
 --#######################################BLOC2########################################################
+--Concatène des valeur pour généré le pcjump
 ID_PCJump <= IF_ID_PCPlus4(31 downto 28) &  IF_ID_Instruction(25 downto 0) & "00";
+--Registre
 RegFile_inst: entity work.RegFile
  port map(
     clk => clk,
@@ -165,6 +164,7 @@ RegFile_inst: entity work.RegFile
     rd2 => ID_rd2
 );
 
+--Signaux 
 ID_SignImm <= ((16 downto 0 => IF_ID_Instruction(15)) ) & (IF_ID_Instruction(14 downto 0)) ;
 ID_rs<= IF_ID_Instruction(25 downto 21);
 ID_rt<= IF_ID_Instruction(20 downto 16);
@@ -207,29 +207,31 @@ begin
         ID_EX_rd            <= ID_rd;
         ID_EX_rd1           <= ID_rd1;
         ID_EX_rd2           <= ID_rd2;
-        ALU_INSTRUCTION <= IF_ID_Instruction;
     end if;             
 end process;
 
 --####################################################################################################
 
 --###############################################BLOC3#####################################################
+--et logique
 EX_PCSrc <= ID_EX_Branch and EX_Zero;
+--Shift left 
 EX_SignImmSh <= ID_EX_SignImm (29 downto 0) &"00";
-
+--Somme de pcbranch et signImmsh
 EX_PCBranch <= std_logic_vector(unsigned(ID_EX_PCPlus4) + unsigned(EX_SignImmSh)); 
 
-
+--Mux 3 entré 
 EX_SrcA <= ID_Ex_rd1 when EX_ForwardA = "00" else
 WB_Result when EX_ForwardA = "01" else
     EX_MEM_AluResult;
-
-
+--Mux 3 entré 
 EX_preSrcB <= ID_Ex_rd2 when EX_ForwardB = "00" else
 WB_Result when EX_ForwardB = "01" else
     EX_MEM_AluResult;
 
+--Mux 2 entré 
 EX_SrcB <= EX_preSrcB when ID_EX_Alusrc = '0' else ID_EX_SignImm;
+--ALU
 UAL_inst: entity work.UAL
  generic map(
     N => 32
@@ -244,6 +246,7 @@ UAL_inst: entity work.UAL
 );
     EX_WriteReg <= ID_EX_rt when ID_EX_Regdst = '0' else ID_EX_rd;
     
+--Unite de control
  unite_inst: entity work.unite
   port map(
      ID_EX_rs => ID_EX_rs,
@@ -283,6 +286,7 @@ begin
 end process;
 
 --##############################################Bloc4######################################################
+
 AluResult <= EX_MEM_AluResult;
 WriteData <=  EX_MEM_presrcb;
 MemReadOut <= EX_MEM_MemRead;
@@ -312,6 +316,7 @@ end process;
 
 
 --#################################BLOC5###################################################################
+--Mux 2 entré
 WB_Result <= MEM_WB_readdata when MEM_WB_MemtoReg = '1' else MEM_WB_AluResult;
 --####################################################################################################
 end architecture;
